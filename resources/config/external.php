@@ -5,7 +5,7 @@ include('config.php');
 function cssMaterial()
 {
     ?>
-    <link href="<?php echo $home; ?>/resources/css/main.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo $home; ?>/resources/css/main.css" type="text/css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet">
     <?php
 }

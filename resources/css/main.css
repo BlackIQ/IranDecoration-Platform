@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'iransans';
+    src: url("../fonts/iransans.ttf");
+}
+
+.body {
+    direction: rtl;
+    text-align: right;
+    font-family: 'iransans', serif;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.text-red {
+    color: darkred !important;
+}
+
+.a-red {
+    cursor: pointer;
+    color: darkred !important;
+}
+.a-red:hover {
+    color: red !important;
+}
+
+.border-red {
+    border: solid 1px darkred !important;
+}
+
+.ibtn {
+    width: auto;
+    padding: 1%;
+}
+
+.btn-red {
+    color: white;
+    background: darkred;
+    border: solid 1px darkred;
+    border-radius: 5px;
+}
+.btn-red:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    opacity: 0.8;
+}
+
+.artpic {
+    background: url("https://wallpapercave.com/wp/wp3016972.jpg") no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height: 100vh;
+}
+
+.welcome {
+    position: relative;
+    padding: 5%;
+    border: solid 1px darkred;
+}
+.welcome p {
+    font-size: 80%;
+}
+.welcome .close-box {
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding: 5%;
+}

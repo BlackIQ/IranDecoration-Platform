@@ -4,7 +4,8 @@ session_start();
 
 $session_status = $_SESSION['status'];
 
-include('config.php');
+include('../resources/config/config.php');
+include('../resources/routes/route.php');
 
 ?>
 
@@ -31,7 +32,8 @@ include('config.php');
                     دکوراسیون ایران زمین یک شرکت برای طراحی، ساخت و راه اندازی دکور های شما میباشد.
                 </p>
                 <p>
-                    اگر حساب کاربری دارید میتوانید با استفاده از آن وارد شوید و یا با لینک زیر فرم به صفحه ثبت نام بروید.
+                    اگر حساب کاربری دارید میتوانید با استفاده از آن وارد شوید و یا با لینک زیر فرم به صفحه ثبت نام
+                    بروید.
                 </p>
                 <i class="fa fa-times text-red close-box"></i>
             </div>
@@ -47,20 +49,23 @@ include('config.php');
                         <div class="col-md-6">
                             <div class="p-1 m-1">
                                 <label for="mail" class="form-label text-red">ایمیل خود را وارد کنید</label>
-                                <input id="mail" name="mail" type="email" class="form-control border-red" placeholder="ایمیل">
+                                <input id="mail" name="mail" type="email" class="form-control border-red"
+                                       placeholder="ایمیل">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="p-1 m-1">
                                 <label for="pass" class="form-label text-red">رمز خود را وارد کنید</label>
-                                <input id="pass" name="pass" type="password" class="form-control border-red" placeholder="رمز">
+                                <input id="pass" name="pass" type="password" class="form-control border-red"
+                                       placeholder="رمز">
                             </div>
                         </div>
                     </div>
                     <br>
                     <button name="login" class="ibtn btn-red" type="submit">ورود</button>
                     <hr class="text-red">
-                    <a class="text-decoration-none a-red" onclick="return changeBox('login-box', 'register-box');">ثبت نام</a>
+                    <a class="text-decoration-none a-red" onclick="return changeBox('login-box', 'register-box');">ثبت
+                        نام</a>
                 </form>
             </div>
             <div id="login-box" style="display: none;">
@@ -74,13 +79,15 @@ include('config.php');
                         <div class="col-md-6">
                             <div class="p-1 m-1">
                                 <label for="fname" class="form-label text-red">نام خود را وارد کنید</label>
-                                <input id="fname" name="fname" type="text" class="form-control border-red" placeholder="khl">
+                                <input id="fname" name="fname" type="text" class="form-control border-red"
+                                       placeholder="khl">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="p-1 m-1">
                                 <label for="lname" class="form-label text-red">نام خانوادگی خود را وارد کنید</label>
-                                <input id="lname" name="lname" type="text" class="form-control border-red" placeholder="نام خانوادگی">
+                                <input id="lname" name="lname" type="text" class="form-control border-red"
+                                       placeholder="نام خانوادگی">
                             </div>
                         </div>
                     </div>
@@ -88,13 +95,15 @@ include('config.php');
                         <div class="col-md-6">
                             <div class="p-1 m-1">
                                 <label for="mail" class="form-label text-red">ایمیل خود را وارد کنید</label>
-                                <input id="mail" name="mail" type="email" class="form-control border-red" placeholder="ایمیل">
+                                <input id="mail" name="mail" type="email" class="form-control border-red"
+                                       placeholder="ایمیل">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="p-1 m-1">
                                 <label for="phone" class="form-label text-red">موبایل خود را وارد کنید</label>
-                                <input id="phone" name="phone" type="number" class="form-control border-red" placeholder="9---">
+                                <input id="phone" name="phone" type="number" class="form-control border-red"
+                                       placeholder="9---">
                             </div>
                         </div>
                     </div>
@@ -102,20 +111,23 @@ include('config.php');
                         <div class="col-md-6">
                             <div class="p-1 m-1">
                                 <label for="pass" class="form-label text-red">رمز خود را وارد کنید</label>
-                                <input id="pass" name="pass" type="password" class="form-control border-red" placeholder="رمز">
+                                <input id="pass" name="pass" type="password" class="form-control border-red"
+                                       placeholder="رمز">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="p-1 m-1">
                                 <label for="rpass" class="form-label text-red">تکرار رمز خود را وارد کنید</label>
-                                <input id="rpass" name="rpass" type="password" class="form-control border-red" placeholder="تایید رمز">
+                                <input id="rpass" name="rpass" type="password" class="form-control border-red"
+                                       placeholder="تایید رمز">
                             </div>
                         </div>
                     </div>
                     <br>
                     <div class="">
                         <input id="agree" name="rpass" class="form-check-input" type="checkbox">
-                        <label for="agree" class="form-check-label text-red">با ثبت نام و کلیک روی دکمه ثبت نام با قوانین دکوراسیون ایران موافق هستم.</label>
+                        <label for="agree" class="form-check-label text-red">با ثبت نام و کلیک روی دکمه ثبت نام با
+                            قوانین دکوراسیون ایران موافق هستم.</label>
                     </div>
                     <br>
                     <button name="login" class="ibtn btn-red" type="submit">ثبت نام</button>
@@ -123,6 +135,25 @@ include('config.php');
                 <hr class="text-red">
                 <a class="text-decoration-none a-red" onclick="return changeBox('register-box', 'login-box');">ورود</a>
             </div>
+            <br>
+            <?php
+            if (count($errors) > 0) {
+                ?>
+                <ul>
+                    <?php
+                    foreach ($errors as $error) {
+                        ?>
+                        <li><?php echo $error; ?></li>
+                        <?php
+                    }
+                    ?>
+                </ul>
+                <?php
+            }
+            else {
+                // Do nothing
+            }
+            ?>
         </div>
         <div class="col-md-6 artpic">
         </div>

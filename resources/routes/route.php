@@ -1,9 +1,12 @@
 <?php
 
+session_start();
+
 include('../config/config.php');
 
 $errors = array();
 
+// Login user
 if (isset($_POST['login'])) {
     $email = mysqli_real_escape_string($connection, $_POST['mail']);
     $password = mysqli_real_escape_string($connection, $_POST['pass']);
@@ -16,6 +19,12 @@ if (isset($_POST['login'])) {
     }
 
     if (count($errors) == 0) {
-        echo 'Ok';
+        $query = mysqli_query($connection, "SELECT * FROM users WHERE mail = '$email' AND passcode = '$password'");
+        if (mysqli_num_rows($query) == 1) {
+            $user_row = mysqli_fetch_assoc($query);
+            $_SESSION['status'] = true;
+            $_SESSION['user'] = $user_row;
+            header('Location: ' . $home . '/user');
+        }
     }
 }

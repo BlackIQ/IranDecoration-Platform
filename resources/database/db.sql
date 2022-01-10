@@ -11,8 +11,5 @@ CREATE TABLE `users`
     PRIMARY KEY (`row`)
 );
 
-INSERT INTO users (id, name, mail, phone, passcode, `join`)
-VALUES ('0481244859', 'Amirhossein Mohamamdi', 'amir@gmail.com', '+989014784362', 'main2022', 'Jan 9 2022');
-
 SELECT *
 FROM users;

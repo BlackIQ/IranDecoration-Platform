@@ -84,7 +84,7 @@ if ($session_status == true) {
                             <div class="p-1 m-1">
                                 <label for="fname" class="form-label text-red">نام خود را وارد کنید</label>
                                 <input id="fname" name="fname" type="text" class="form-control border-red"
-                                       placeholder="khl">
+                                       placeholder="نام">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -129,18 +129,19 @@ if ($session_status == true) {
                     </div>
                     <br>
                     <div class="">
-                        <input id="agree" name="rpass" class="form-check-input" type="checkbox">
+                        <input id="agree" name="agree" class="form-check-input" value="agree" type="checkbox">
                         <label for="agree" class="form-check-label text-red">با ثبت نام و کلیک روی دکمه ثبت نام با
                             قوانین دکوراسیون ایران موافق هستم.</label>
                     </div>
                     <br>
-                    <button name="login" class="ibtn btn-red" type="submit">ثبت نام</button>
+                    <button name="register" class="ibtn btn-red" type="submit">ثبت نام</button>
                 </form>
                 <hr class="text-red">
                 <a class="text-decoration-none a-red" onclick="return changeBox('register-box', 'login-box');">ورود</a>
             </div>
             <br>
             <?php
+            // TODO: Create errors box
             if (count($errors) > 0) {
                 ?>
                 <ul>

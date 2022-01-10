@@ -141,22 +141,23 @@ if ($session_status == true) {
             </div>
             <br>
             <?php
-            // TODO: Create errors box
             if (count($errors) > 0) {
                 ?>
-                <ul>
-                    <?php
-                    foreach ($errors as $error) {
-                        ?>
-                        <li><?php echo $error; ?></li>
+                <div class="alert alert-danger error-box">
+                    <ul>
                         <?php
-                    }
-                    ?>
-                </ul>
+                        foreach ($errors as $error) {
+                            ?>
+                            <li><?php echo $error; ?></li>
+                            <?php
+                        }
+                        ?>
+                    </ul>
+                    <div class="close-error">
+                        <button class="btn btn-outline-danger">پنهان سازی</button>
+                    </div>
+                </div>
                 <?php
-            }
-            else {
-                // Do nothing
             }
             ?>
         </div>

@@ -8,6 +8,9 @@
     text-align: right;
     font-family: 'iransans', serif;
 }
+.main {
+    padding: 1%;
+}
 
 .pointer {
     cursor: pointer;
@@ -63,6 +66,19 @@
     font-size: 80%;
 }
 .welcome .close-box {
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding: 5%;
+}
+
+.auth-error {
+    position: relative;
+    padding: 5%;
+    border: solid 1px darkred;
+}
+.auth-error .close-box {
     cursor: pointer;
     top: 0;
     left: 0;

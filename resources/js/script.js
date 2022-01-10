@@ -1,6 +1,9 @@
 $(".close-box").click(function () {
     $(".welcome").hide(500);
-    console.log('tap');
+});
+
+$(".close-error").click(function () {
+    $(".error-box").hide();
 });
 
 function changeBox(show, hide) {

@@ -26,6 +26,9 @@ if (isset($_POST['login'])) {
             $_SESSION['user'] = $user_row;
             header('Location: ' . $home . '/user');
         }
+        else {
+            array_push($errors, 'ایمیل یا رمز اشتباه میباشد.');
+        }
     }
 }
 
@@ -77,6 +80,9 @@ if (isset($_POST['register'])) {
             $_SESSION['status'] = true;
             $_SESSION['user'] = $user_row;
             header('Location: ' . $home . '/user');
+        }
+        else {
+            array_push($errors, mysqli_error($connection));
         }
     }
 }

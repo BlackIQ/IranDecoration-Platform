@@ -7,9 +7,13 @@ $(".close-error").click(function () {
 });
 
 $('.faq .faq-answer').hide();
+$('.post .post-footer').hide();
 
 $('.faq-question').click(function () {
     $(this).next('.faq-answer').slideToggle();
+});
+$('.post-more').click(function () {
+    $(this).next('.post-footer').slideToggle();
 });
 
 function changeBox(show, hide) {

@@ -6,6 +6,12 @@ $(".close-error").click(function () {
     $(".error-box").hide();
 });
 
+$('.faq .faq-answer').hide();
+
+$('.faq-question').click(function () {
+    $(this).next('.faq-answer').slideToggle();
+});
+
 function changeBox(show, hide) {
     document.getElementById(show).style.display = 'block';
     document.getElementById(hide).style.display = 'none';

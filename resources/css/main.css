@@ -16,6 +16,11 @@
     cursor: pointer;
 }
 
+.phone {
+    text-align: left;
+    direction: ltr;
+}
+
 .text-red {
     color: darkred !important;
 }
@@ -34,6 +39,11 @@
 
 .ibtn {
     width: auto;
+    padding: 1%;
+}
+
+.wbtn {
+    width: 100%;
     padding: 1%;
 }
 

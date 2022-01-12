@@ -37,7 +37,10 @@ $session_status = $_SESSION['status'];
                     <a class="nav-link" href="<?php echo $home; ?>/pages/about.php">درباره ما</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href=".">سوالات متداول</a>
+                    <a class="nav-link active" aria-current="page" href="<?php echo $home; ?>/pages/faq.php">سوالات متداول</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo $home; ?>/pages/contact.php">ارتباط با ما</a>
                 </li>
             </ul>
             <div class="me-auto">
@@ -57,7 +60,7 @@ $session_status = $_SESSION['status'];
     <p>
         در اینجا سعی میکنیم به مرتبط ترین سوالات شما جواب دهیم. اما اگر سوال شما در بین سوال های نوشته شده نبود، میتوانید سوال خود را با ما از طریق فرم ارتباط با ما به اشتراک بزارید.
     </p>
-    <hr>
+    <hr class="text-red">
     <div class="row">
         <div class="col-md-6">
             <div class="faq border-red m-1">

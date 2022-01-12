@@ -116,10 +116,10 @@ if (isset($_POST['sendmessage'])) {
         $date = date("M d, Y H:i:s");
         $query = mysqli_query($connection, "INSERT INTO messages (id, date, name, mobile, email, subject, message) VALUES ('$id', '$date', '$name', '$phone', '$mail', '$subject', '$message')");
         if ($query) {
-            header('Location: ' . $home . '/pages/contact.php');
             ?>
             <script>showAlert('پیام شما با موفقیت ارسال شد.');</script>
             <?php
+            header('Location: ' . $home . '/pages/contact.php');
         }
         else {
             array_push($errors, mysqli_error($connection));

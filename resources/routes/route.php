@@ -86,3 +86,43 @@ if (isset($_POST['register'])) {
         }
     }
 }
+
+// Register user
+if (isset($_POST['sendmessage'])) {
+    $name = mysqli_real_escape_string($connection, $_POST['name']);
+    $mail = mysqli_real_escape_string($connection, $_POST['mail']);
+    $phone = mysqli_real_escape_string($connection, $_POST['mobile']);
+    $subject = mysqli_real_escape_string($connection, $_POST['subject']);
+    $message = mysqli_real_escape_string($connection, $_POST['message']);
+
+    if (empty($name)) {
+        array_push($errors, 'نام الزامیست');
+    }
+    if (empty($mail)) {
+        array_push($errors, 'ایمیل الزامیست');
+    }
+    if (empty($phone)) {
+        $phone = null;
+    }
+    if (empty($subject)) {
+        array_push($errors, 'موضوع الزامیست');
+    }
+    if (empty($message)) {
+        array_push($errors, 'متن الزامیست');
+    }
+
+    if (count($errors) == 0) {
+        $id = rand(11111111, 99999999);
+        $date = date("M d, Y H:i:s");
+        $query = mysqli_query($connection, "INSERT INTO messages (id, date, name, mobile, email, subject, message) VALUES ('$id', '$date', '$name', '$phone', '$mail', '$subject', '$message')");
+        if ($query) {
+            header('Location: ' . $home . '/pages/contact.php');
+            ?>
+            <script>showAlert('پیام شما با موفقیت ارسال شد.');</script>
+            <?php
+        }
+        else {
+            array_push($errors, mysqli_error($connection));
+        }
+    }
+}

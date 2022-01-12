@@ -107,3 +107,7 @@
 .bg-blur {
     backdrop-filter: blur(10px);
 }
+
+.user-nav-link {
+    cursor: pointer;
+}

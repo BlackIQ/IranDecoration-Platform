@@ -67,12 +67,17 @@ $session_status = $_SESSION['status'];
                 <h3 class="text-red">ارتباط از طریق فرم</h3>
                 <hr class="text-red">
                 <form action="contact.php" method="post" autocomplete="off">
+                    <div class="m-1">
+                        <label for="name" class="form-label text-red">نام *</label>
+                        <input id="name" name="name" type="text" class="form-control border-red"
+                               placeholder="نام" required>
+                    </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="m-1">
-                                <label for="mail" class="form-label text-red">ایمیل</label>
+                                <label for="mail" class="form-label text-red">ایمیل *</label>
                                 <input id="mail" name="mail" type="email" class="form-control border-red"
-                                       placeholder="ایمیل">
+                                       placeholder="ایمیل" required>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -84,16 +89,16 @@ $session_status = $_SESSION['status'];
                         </div>
                     </div>
                     <div class="m-1">
-                        <label for="subject" class="form-label text-red">موضوع پیام</label>
+                        <label for="subject" class="form-label text-red">موضوع پیام *</label>
                         <input id="subject" name="subject" type="text" class="form-control border-red"
-                               placeholder="موضوع">
+                               placeholder="موضوع" required>
                     </div>
                     <div class="m-1">
-                        <label for="text" class="form-label text-red">متن پیام</label>
-                        <textarea name="text" rows="5" id="text" class="form-control border-red"></textarea>
+                        <label for="text" class="form-label text-red">متن پیام *</label>
+                        <textarea name="text" rows="5" id="text" class="form-control border-red" placeholder="متن پیام" required></textarea>
                     </div>
                     <br>
-                    <button name="login" class="wbtn btn-red" type="submit">ارسال پیام</button>
+                    <button name="sendmessage" class="wbtn btn-red" type="submit">ارسال پیام</button>
                 </form>
             </div>
         </div>

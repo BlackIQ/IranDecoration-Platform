@@ -23,7 +23,7 @@ $session_status = $_SESSION['status'];
 <body class="body">
 <nav class="navbar navbar-expand-lg navbar-light bg-blur fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="<?php echo $home; ?>">دکوراسیون ایران زمین</a>
+        <a class="navbar-brand text-red" href="<?php echo $home; ?>">دکوراسیون ایران زمین</a>
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
@@ -42,6 +42,9 @@ $session_status = $_SESSION['status'];
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo $home; ?>/pages/contact.php">ارتباط با ما</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo $home; ?>/posts">اگهی ها</a>
+                </li>
             </ul>
             <div class="me-auto">
                 <?php
@@ -55,7 +58,7 @@ $session_status = $_SESSION['status'];
     </div>
 </nav>
 <div class="main">
-    <h1>سوالات متداول</h1>
+    <h1 class="text-red">سوالات متداول</h1>
     <br>
     <p>
         در اینجا سعی میکنیم به مرتبط ترین سوالات شما جواب دهیم. اما اگر سوال شما در بین سوال های نوشته شده نبود، میتوانید سوال خود را با ما از طریق فرم ارتباط با ما به اشتراک بزارید.

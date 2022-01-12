@@ -111,3 +111,21 @@
 .user-nav-link {
     cursor: pointer;
 }
+
+.post {
+    border-radius: 5px;
+    padding: 5%;
+}
+.post-head p {
+    font-size: 15px;
+    font-weight: bold;
+}
+.post-content p {
+    font-size: 13px;
+}
+.post-footer {
+    font-size: 12px;
+}
+.post-more {
+    font-size: 13px;
+}

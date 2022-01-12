@@ -23,7 +23,7 @@ $session_status = $_SESSION['status'];
 <body class="body">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href=".">دکوراسیون ایران زمین</a>
+        <a class="navbar-brand" href="<?php echo $home; ?>">دکوراسیون ایران زمین</a>
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
@@ -31,13 +31,16 @@ $session_status = $_SESSION['status'];
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href=".">خانه</a>
+                    <a class="nav-link active" aria-current="page" href="<?php echo $home; ?>">خانه</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="pages/about.php">درباره ما</a>
+                    <a class="nav-link" href="<?php echo $home; ?>/pages/about.php">درباره ما</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="pages/faq.php">سوالات متداول</a>
+                    <a class="nav-link" href="<?php echo $home; ?>/pages/faq.php">سوالات متداول</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo $home; ?>/pages/contact.php">ارتباط با ما</a>
                 </li>
             </ul>
             <div class="me-auto">

@@ -21,7 +21,7 @@ $session_status = $_SESSION['status'];
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet">
 </head>
 <body class="body">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-blur fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="<?php echo $home; ?>">دکوراسیون ایران زمین</a>
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarText"
@@ -62,6 +62,281 @@ $session_status = $_SESSION['status'];
     </p>
     <hr class="text-red">
     <div class="row">
+        <div class="col-md-6">
+            <div class="faq border-red m-1">
+                <div class="faq-question">
+                    <h3 class="text-red">سوال</h3>
+                </div>
+                <div class="faq-answer">
+                    <hr class="text-red">
+                    <p>جواب</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq border-red m-1">
+                <div class="faq-question">
+                    <h3 class="text-red">سوال</h3>
+                </div>
+                <div class="faq-answer">
+                    <hr class="text-red">
+                    <p>جواب</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq border-red m-1">
+                <div class="faq-question">
+                    <h3 class="text-red">سوال</h3>
+                </div>
+                <div class="faq-answer">
+                    <hr class="text-red">
+                    <p>جواب</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq border-red m-1">
+                <div class="faq-question">
+                    <h3 class="text-red">سوال</h3>
+                </div>
+                <div class="faq-answer">
+                    <hr class="text-red">
+                    <p>جواب</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq border-red m-1">
+                <div class="faq-question">
+                    <h3 class="text-red">سوال</h3>
+                </div>
+                <div class="faq-answer">
+                    <hr class="text-red">
+                    <p>جواب</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq border-red m-1">
+                <div class="faq-question">
+                    <h3 class="text-red">سوال</h3>
+                </div>
+                <div class="faq-answer">
+                    <hr class="text-red">
+                    <p>جواب</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq border-red m-1">
+                <div class="faq-question">
+                    <h3 class="text-red">سوال</h3>
+                </div>
+                <div class="faq-answer">
+                    <hr class="text-red">
+                    <p>جواب</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq border-red m-1">
+                <div class="faq-question">
+                    <h3 class="text-red">سوال</h3>
+                </div>
+                <div class="faq-answer">
+                    <hr class="text-red">
+                    <p>جواب</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq border-red m-1">
+                <div class="faq-question">
+                    <h3 class="text-red">سوال</h3>
+                </div>
+                <div class="faq-answer">
+                    <hr class="text-red">
+                    <p>جواب</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq border-red m-1">
+                <div class="faq-question">
+                    <h3 class="text-red">سوال</h3>
+                </div>
+                <div class="faq-answer">
+                    <hr class="text-red">
+                    <p>جواب</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq border-red m-1">
+                <div class="faq-question">
+                    <h3 class="text-red">سوال</h3>
+                </div>
+                <div class="faq-answer">
+                    <hr class="text-red">
+                    <p>جواب</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq border-red m-1">
+                <div class="faq-question">
+                    <h3 class="text-red">سوال</h3>
+                </div>
+                <div class="faq-answer">
+                    <hr class="text-red">
+                    <p>جواب</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq border-red m-1">
+                <div class="faq-question">
+                    <h3 class="text-red">سوال</h3>
+                </div>
+                <div class="faq-answer">
+                    <hr class="text-red">
+                    <p>جواب</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq border-red m-1">
+                <div class="faq-question">
+                    <h3 class="text-red">سوال</h3>
+                </div>
+                <div class="faq-answer">
+                    <hr class="text-red">
+                    <p>جواب</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq border-red m-1">
+                <div class="faq-question">
+                    <h3 class="text-red">سوال</h3>
+                </div>
+                <div class="faq-answer">
+                    <hr class="text-red">
+                    <p>جواب</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq border-red m-1">
+                <div class="faq-question">
+                    <h3 class="text-red">سوال</h3>
+                </div>
+                <div class="faq-answer">
+                    <hr class="text-red">
+                    <p>جواب</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq border-red m-1">
+                <div class="faq-question">
+                    <h3 class="text-red">سوال</h3>
+                </div>
+                <div class="faq-answer">
+                    <hr class="text-red">
+                    <p>جواب</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq border-red m-1">
+                <div class="faq-question">
+                    <h3 class="text-red">سوال</h3>
+                </div>
+                <div class="faq-answer">
+                    <hr class="text-red">
+                    <p>جواب</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq border-red m-1">
+                <div class="faq-question">
+                    <h3 class="text-red">سوال</h3>
+                </div>
+                <div class="faq-answer">
+                    <hr class="text-red">
+                    <p>جواب</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq border-red m-1">
+                <div class="faq-question">
+                    <h3 class="text-red">سوال</h3>
+                </div>
+                <div class="faq-answer">
+                    <hr class="text-red">
+                    <p>جواب</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq border-red m-1">
+                <div class="faq-question">
+                    <h3 class="text-red">سوال</h3>
+                </div>
+                <div class="faq-answer">
+                    <hr class="text-red">
+                    <p>جواب</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq border-red m-1">
+                <div class="faq-question">
+                    <h3 class="text-red">سوال</h3>
+                </div>
+                <div class="faq-answer">
+                    <hr class="text-red">
+                    <p>جواب</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq border-red m-1">
+                <div class="faq-question">
+                    <h3 class="text-red">سوال</h3>
+                </div>
+                <div class="faq-answer">
+                    <hr class="text-red">
+                    <p>جواب</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq border-red m-1">
+                <div class="faq-question">
+                    <h3 class="text-red">سوال</h3>
+                </div>
+                <div class="faq-answer">
+                    <hr class="text-red">
+                    <p>جواب</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq border-red m-1">
+                <div class="faq-question">
+                    <h3 class="text-red">سوال</h3>
+                </div>
+                <div class="faq-answer">
+                    <hr class="text-red">
+                    <p>جواب</p>
+                </div>
+            </div>
+        </div>
         <div class="col-md-6">
             <div class="faq border-red m-1">
                 <div class="faq-question">

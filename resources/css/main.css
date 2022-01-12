@@ -37,6 +37,12 @@
     border: solid 1px darkred !important;
 }
 
+.bg-red {
+    color: white;
+    padding: 0% 2% 2%;
+    background: darkred;
+}
+
 .ibtn {
     width: auto;
     padding: 1%;

@@ -3,6 +3,7 @@
 session_start();
 
 include('../resources/config/config.php');
+include('../resources/routes/route.php');
 
 $session_status = $_SESSION['status'];
 
@@ -95,7 +96,7 @@ $session_status = $_SESSION['status'];
                     </div>
                     <div class="m-1">
                         <label for="text" class="form-label text-red">متن پیام *</label>
-                        <textarea name="text" rows="5" id="text" class="form-control border-red" placeholder="متن پیام" required></textarea>
+                        <textarea name="message" rows="5" id="text" class="form-control border-red" placeholder="متن پیام" required></textarea>
                     </div>
                     <br>
                     <button name="sendmessage" class="wbtn btn-red" type="submit">ارسال پیام</button>
@@ -118,6 +119,27 @@ $session_status = $_SESSION['status'];
                     <i class="fa fa-envelope text-red"></i>
                     <span class="phone">info@irandecoration.com</span>
                 </p>
+                <br>
+                <?php
+                if (count($errors) > 0) {
+                    ?>
+                    <div class="alert alert-danger error-box">
+                        <ul>
+                            <?php
+                            foreach ($errors as $error) {
+                                ?>
+                                <li><?php echo $error; ?></li>
+                                <?php
+                            }
+                            ?>
+                        </ul>
+                        <div class="close-error">
+                            <button class="btn btn-outline-danger">پنهان سازی</button>
+                        </div>
+                    </div>
+                    <?php
+                }
+                ?>
             </div>
         </div>
     </div>

@@ -22,3 +22,7 @@ function changeUrl(url) {
     window.location.href = url;
     return false;
 }
+
+function showAlert(text) {
+    window.alert(text);
+}

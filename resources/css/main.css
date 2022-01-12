@@ -9,7 +9,7 @@
     font-family: 'iransans', serif;
 }
 .main {
-    padding: 2%;
+    padding: 75px 2% 2%;
 }
 
 .pointer {
@@ -102,4 +102,8 @@
 }
 .faq-question {
     cursor: pointer;
+}
+
+.bg-blur {
+    backdrop-filter: blur(10px);
 }

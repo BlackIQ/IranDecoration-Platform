@@ -147,7 +147,7 @@ $session_status = $_SESSION['status'];
         </div>
     </div>
 </div>
-
+<div><?php include('../resources/widgets/footer.php'); ?></div>
 <script src="<?php echo $home; ?>/resources/js/jquery-3.6.0.min.js"></script>
 <script src="<?php echo $home; ?>/resources/js/script.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.js"></script>

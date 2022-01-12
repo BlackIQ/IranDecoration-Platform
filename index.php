@@ -4,12 +4,7 @@ session_start();
 
 include('resources/config/config.php');
 
-if (isset($_SESSION['status'])) {
-    $session_status = false;
-}
-else {
-    $session_status = true;
-}
+$session_status = $_SESSION['status'];
 
 ?>
 
@@ -28,7 +23,7 @@ else {
 <body class="body">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">دکوراسیون ایران زمین</a>
+        <a class="navbar-brand" href=".">دکوراسیون ایران زمین</a>
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
@@ -36,18 +31,18 @@ else {
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">خانه</a>
+                    <a class="nav-link active" aria-current="page" href=".">خانه</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">درباره ما</a>
+                    <a class="nav-link" href="pages/about.php">درباره ما</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">سوالات متداول</a>
+                    <a class="nav-link" href="pages/faq.php">سوالات متداول</a>
                 </li>
             </ul>
             <div class="me-auto">
                 <?php
-                if ($session_status == true) {
+                if (!$session_status) {
                     echo '<a href="client" class="nav-link">ورود به حساب</a>';
                 } else {
                     echo '<a href="client/logout.php" class="nav-link">خارج شدن از حساب</a>';                }
@@ -57,8 +52,8 @@ else {
     </div>
 </nav>
 
-<script src="<?php echo $home; ?>/resources/js/script.js"></script>
 <script src="<?php echo $home; ?>/resources/js/jquery-3.6.0.min.js"></script>
+<script src="<?php echo $home; ?>/resources/js/script.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.js"></script>
 </body>
 </html>

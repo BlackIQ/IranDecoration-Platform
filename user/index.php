@@ -25,10 +25,35 @@ if (!$session_status) {
     <link href="<?php echo $home; ?>/resources/css/main.css" type="text/css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet">
 </head>
-<body>
-<div class="hi">
-    <h1>H</h1>
-</div>
+<body class="body">
+<nav class="navbar navbar-expand-lg navbar-light bg-blur fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="<?php echo $home; ?>">دکوراسیون ایران زمین</a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <span id="overview-link" class="nav-link user-nav-link text-red">نگاه کلی</span>
+                </li>
+                <li class="nav-item">
+                    <span id="requests-link" class="nav-link user-nav-link">درخواست ها</span>
+                </li>
+                <li class="nav-item">
+                    <span id="ads-link" class="nav-link user-nav-link">آگهی ها</span>
+                </li>
+                <li class="nav-item">
+                    <span id="settings-link" class="nav-link user-nav-link">تنظیمات</span>
+                </li>
+            </ul>
+            <div class="me-auto">
+                <a href="../client/logout.php" class="nav-link">خروج از حساب</a>
+            </div>
+        </div>
+    </div>
+</nav>
 
 <script src="<?php echo $home; ?>/resources/js/jquery-3.6.0.min.js"></script>
 <script src="<?php echo $home; ?>/resources/js/script.js"></script>

@@ -1,4 +1,5 @@
 tabs = ['.overview', '.ads', '.requests', '.settings'];
+navs = ['#overview-link', '#ads-link', '#requests-link', '#settings-link'];
 
 $(".close-box").click(function () {
     $(".welcome").hide(500);
@@ -26,8 +27,18 @@ $('#ads-link').click(function () {
                 $(tabs[tabsKey]).addClass('none');
             }
         }
+        for (const navKey in navs) {
+            if ($(navs[navKey]).hasClass('active')) {
+                $(navs[navKey]).removeClass('active');
+                $(navs[navKey]).removeClass('text-red');
+            }
+        }
+        $(this).addClass('text-red');
+        $(this).addClass('active');
         $('.ads').removeClass('none');
         $('.ads').addClass('block');
+        $(this).addClass('text-red');
+        $(this).addClass('active');
     }
 });
 
@@ -39,6 +50,14 @@ $('#requests-link').click(function () {
                 $(tabs[tabsKey]).addClass('none');
             }
         }
+        for (const navKey in navs) {
+            if ($(navs[navKey]).hasClass('active')) {
+                $(navs[navKey]).removeClass('active');
+                $(navs[navKey]).removeClass('text-red');
+            }
+        }
+        $(this).addClass('text-red');
+        $(this).addClass('active');
         $('.requests').removeClass('none');
         $('.requests').addClass('block');
     }
@@ -52,6 +71,14 @@ $('#settings-link').click(function () {
                 $(tabs[tabsKey]).addClass('none');
             }
         }
+        for (const navKey in navs) {
+            if ($(navs[navKey]).hasClass('active')) {
+                $(navs[navKey]).removeClass('active');
+                $(navs[navKey]).removeClass('text-red');
+            }
+        }
+        $(this).addClass('text-red');
+        $(this).addClass('active');
         $('.settings').removeClass('none');
         $('.settings').addClass('block');
     }
@@ -65,6 +92,14 @@ $('#overview-link').click(function () {
                 $(tabs[tabsKey]).addClass('none');
             }
         }
+        for (const navKey in navs) {
+            if ($(navs[navKey]).hasClass('active')) {
+                $(navs[navKey]).removeClass('active');
+                $(navs[navKey]).removeClass('text-red');
+            }
+        }
+        $(this).addClass('text-red');
+        $(this).addClass('active');
         $('.overview').removeClass('none');
         $('.overview').addClass('block');
     }

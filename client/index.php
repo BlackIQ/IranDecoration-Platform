@@ -30,7 +30,7 @@ if ($session_status == true) {
     <div class="row">
         <div class="col-md-6 vh-100 p-5 overflow-y-scroll">
             <div class="welcome">
-                <h3 class="text-red">به دکوراسیون ایران زمین خوش آمدید!</h3>
+                <h3 class="text-main">به دکوراسیون ایران زمین خوش آمدید!</h3>
                 <br>
                 <p>
                     دکوراسیون ایران زمین یک شرکت برای طراحی، ساخت و راه اندازی دکور های شما میباشد.
@@ -39,57 +39,57 @@ if ($session_status == true) {
                     اگر حساب کاربری دارید میتوانید با استفاده از آن وارد شوید و یا با لینک زیر فرم به صفحه ثبت نام
                     بروید.
                 </p>
-                <i class="fa fa-times text-red close-box"></i>
+                <i class="fa fa-times text-main close-box"></i>
             </div>
             <br>
             <div id="register-box" style="display: block">
-                <h4 class="text-red">
+                <h4 class="text-main">
                     ورود کاربر
                     <i class="fa fa-home float-start pointer" onclick="return changeUrl('../');"></i>
                 </h4>
-                <hr class="text-red">
+                <hr class="text-main">
                 <form action="index.php" method="post" autocomplete="off">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="p-1 m-1">
-                                <label for="mail" class="form-label text-red">ایمیل خود را وارد کنید</label>
+                                <label for="mail" class="form-label text-main">ایمیل خود را وارد کنید</label>
                                 <input id="mail" name="mail" type="email" class="form-control border-red"
                                        placeholder="ایمیل">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="p-1 m-1">
-                                <label for="pass" class="form-label text-red">رمز خود را وارد کنید</label>
+                                <label for="pass" class="form-label text-main">رمز خود را وارد کنید</label>
                                 <input id="pass" name="pass" type="password" class="form-control border-red"
                                        placeholder="رمز">
                             </div>
                         </div>
                     </div>
                     <br>
-                    <button name="login" class="ibtn btn-red" type="submit">ورود</button>
-                    <hr class="text-red">
-                    <a class="text-decoration-none a-red" onclick="return changeBox('login-box', 'register-box');">ثبت
+                    <button name="login" class="ibtn btn-main" type="submit">ورود</button>
+                    <hr class="text-main">
+                    <a class="text-decoration-none a-main" onclick="return changeBox('login-box', 'register-box');">ثبت
                         نام</a>
                 </form>
             </div>
             <div id="login-box" style="display: none;">
-                <h4 class="text-red">
+                <h4 class="text-main">
                     ثبت نام کاربر
                     <i class="fa fa-home float-start pointer" onclick="return changeUrl('../');"></i>
                 </h4>
-                <hr class="text-red">
+                <hr class="text-main">
                 <form action="index.php" method="post" autocomplete="off">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="p-1 m-1">
-                                <label for="fname" class="form-label text-red">نام خود را وارد کنید</label>
+                                <label for="fname" class="form-label text-main">نام خود را وارد کنید</label>
                                 <input id="fname" name="fname" type="text" class="form-control border-red"
                                        placeholder="نام">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="p-1 m-1">
-                                <label for="lname" class="form-label text-red">نام خانوادگی خود را وارد کنید</label>
+                                <label for="lname" class="form-label text-main">نام خانوادگی خود را وارد کنید</label>
                                 <input id="lname" name="lname" type="text" class="form-control border-red"
                                        placeholder="نام خانوادگی">
                             </div>
@@ -98,14 +98,14 @@ if ($session_status == true) {
                     <div class="row">
                         <div class="col-md-6">
                             <div class="p-1 m-1">
-                                <label for="mail" class="form-label text-red">ایمیل خود را وارد کنید</label>
+                                <label for="mail" class="form-label text-main">ایمیل خود را وارد کنید</label>
                                 <input id="mail" name="mail" type="email" class="form-control border-red"
                                        placeholder="ایمیل">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="p-1 m-1">
-                                <label for="phone" class="form-label text-red">موبایل خود را وارد کنید</label>
+                                <label for="phone" class="form-label text-main">موبایل خود را وارد کنید</label>
                                 <input id="phone" name="phone" type="number" class="form-control border-red"
                                        placeholder="9---">
                             </div>
@@ -114,14 +114,14 @@ if ($session_status == true) {
                     <div class="row">
                         <div class="col-md-6">
                             <div class="p-1 m-1">
-                                <label for="pass" class="form-label text-red">رمز خود را وارد کنید</label>
+                                <label for="pass" class="form-label text-main">رمز خود را وارد کنید</label>
                                 <input id="pass" name="pass" type="password" class="form-control border-red"
                                        placeholder="رمز">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="p-1 m-1">
-                                <label for="rpass" class="form-label text-red">تکرار رمز خود را وارد کنید</label>
+                                <label for="rpass" class="form-label text-main">تکرار رمز خود را وارد کنید</label>
                                 <input id="rpass" name="rpass" type="password" class="form-control border-red"
                                        placeholder="تایید رمز">
                             </div>
@@ -130,14 +130,14 @@ if ($session_status == true) {
                     <br>
                     <div class="">
                         <input id="agree" name="agree" class="form-check-input" value="agree" type="checkbox">
-                        <label for="agree" class="form-check-label text-red">با ثبت نام و کلیک روی دکمه ثبت نام با
+                        <label for="agree" class="form-check-label text-main">با ثبت نام و کلیک روی دکمه ثبت نام با
                             قوانین دکوراسیون ایران موافق هستم.</label>
                     </div>
                     <br>
-                    <button name="register" class="ibtn btn-red" type="submit">ثبت نام</button>
+                    <button name="register" class="ibtn btn-main" type="submit">ثبت نام</button>
                 </form>
-                <hr class="text-red">
-                <a class="text-decoration-none a-red" onclick="return changeBox('register-box', 'login-box');">ورود</a>
+                <hr class="text-main">
+                <a class="text-decoration-none a-main" onclick="return changeBox('register-box', 'login-box');">ورود</a>
             </div>
             <br>
             <?php

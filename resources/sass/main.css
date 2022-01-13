@@ -21,21 +21,21 @@
   direction: ltr;
 }
 
-.text-red {
-  color: darkred !important;
+.text-main {
+  color: darkblue !important;
 }
 
-.a-red {
+.a-main {
   cursor: pointer;
-  color: darkred !important;
+  color: darkblue !important;
 }
 
-.a-red:hover {
+.a-main:hover {
   color: red !important;
 }
 
 .border-red {
-  border: solid 1px darkred !important;
+  border: solid 1px darkblue !important;
 }
 
 .block {
@@ -46,10 +46,10 @@
   display: none;
 }
 
-.bg-red {
+.bg-main {
   color: white;
   padding: 0 2% 2%;
-  background: darkred;
+  background: darkblue;
 }
 
 .ibtn {
@@ -67,14 +67,14 @@
   padding: 1%;
 }
 
-.btn-red {
+.btn-main {
   color: white;
-  background: darkred;
-  border: solid 1px darkred;
+  background: darkblue;
+  border: solid 1px darkblue;
   border-radius: 5px;
 }
 
-.btn-red:hover {
+.btn-main:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
   opacity: 0.8;
 }
@@ -91,7 +91,7 @@
 .welcome {
   position: relative;
   padding: 5%;
-  border: solid 1px darkred;
+  border: solid 1px darkblue;
 }
 
 .welcome p {
@@ -109,7 +109,7 @@
 .auth-error {
   position: relative;
   padding: 5%;
-  border: solid 1px darkred;
+  border: solid 1px darkblue;
 }
 
 .auth-error .close-box {

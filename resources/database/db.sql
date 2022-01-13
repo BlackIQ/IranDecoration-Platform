@@ -20,6 +20,20 @@ CREATE TABLE IF NOT EXISTS `messages`
     `email`   text,
     `subject` text,
     `message` text,
+    `status`  text,
+    PRIMARY KEY (`row`)
+);
+
+CREATE TABLE IF NOT EXISTS `posts`
+(
+    `row`      INT(11) AUTO_INCREMENT,
+    `id`       text,
+    `name`     text,
+    `caption`  text,
+    `date`     text,
+    `city`     text,
+    `user`     text,
+    `category` text,
     PRIMARY KEY (`row`)
 );
 

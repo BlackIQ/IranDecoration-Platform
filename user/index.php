@@ -28,7 +28,7 @@ if (!$session_status) {
 <body class="body">
 <nav class="navbar navbar-expand-lg navbar-light bg-blur fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="<?php echo $home; ?>">دکوراسیون ایران زمین</a>
+        <a class="navbar-brand text-red" href="<?php echo $home; ?>">دکوراسیون ایران زمین</a>
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
@@ -36,7 +36,7 @@ if (!$session_status) {
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <span id="overview-link" class="nav-link user-nav-link text-red">نگاه کلی</span>
+                    <span id="overview-link" class="nav-link user-nav-link active text-red">نگاه کلی</span>
                 </li>
                 <li class="nav-item">
                     <span id="requests-link" class="nav-link user-nav-link">درخواست ها</span>
@@ -48,7 +48,8 @@ if (!$session_status) {
                     <span id="settings-link" class="nav-link user-nav-link">تنظیمات</span>
                 </li>
                 <li class="nav-item">
-                    <span id="add-ad-link" class="nav-link user-nav-link">اگهی جدید</span>
+                    <span id="add-ad-link" data-mdb-toggle="modal" data-mdb-target="#addNewPost"
+                          class="nav-link user-nav-link">اگهی جدید</span>
                 </li>
             </ul>
             <div class="me-auto">
@@ -123,9 +124,25 @@ if (!$session_status) {
         </div>
     </div>
 </div>
-
 <script src="<?php echo $home; ?>/resources/js/jquery-3.6.0.min.js"></script>
 <script src="<?php echo $home; ?>/resources/js/script.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.js"></script>
 </body>
 </html>
+
+<!-- Modal -->
+<div class="modal fade" id="addNewPost" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">اضافه کردن آگهی جدید</h5>
+            </div>
+            <div class="modal-body">
+                <p>چیز میزای اضافه کردن</p>
+            </div>
+            <div class="modal-footer">
+                <button class="ibtn btn-red" type="submit" name="addnewad">ثبت آگهی</button>
+            </div>
+        </div>
+    </div>
+</div>

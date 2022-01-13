@@ -75,14 +75,14 @@ else {
 <div class="main">
     <div class="row">
         <div class="col-md-6">
-            <div class="m-1 ibox" style="border-right: solid 1px darkred;">
+            <div class="m-1 ibox border-right">
                 <h3 class="text-main"><?php echo $post['name']; ?></h3>
                 <br>
                 <p><?php echo $post['caption']; ?></p>
             </div>
         </div>
         <div class="col-md-6">
-            <div class="m-1 ibox" style="border-right: solid 1px darkred;">
+            <div class="m-1 ibox border-right">
                 <h4 class="text-main">تماس و اطلاعات بیشتر</h4>
                 <br>
                 <p>

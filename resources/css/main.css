@@ -37,6 +37,13 @@
     border: solid 1px darkred !important;
 }
 
+.block {
+    display: block;
+}
+.none {
+    display: none;
+}
+
 .bg-red {
     color: white;
     padding: 0% 2% 2%;
@@ -46,6 +53,11 @@
 .ibtn {
     width: auto;
     padding: 1%;
+}
+
+.ibox {
+    padding: 2%;
+    border-radius: 5px;
 }
 
 .wbtn {

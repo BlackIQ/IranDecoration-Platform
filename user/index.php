@@ -47,6 +47,9 @@ if (!$session_status) {
                 <li class="nav-item">
                     <span id="settings-link" class="nav-link user-nav-link">تنظیمات</span>
                 </li>
+                <li class="nav-item">
+                    <span id="add-ad-link" class="nav-link user-nav-link">اگهی جدید</span>
+                </li>
             </ul>
             <div class="me-auto">
                 <a href="../client/logout.php" class="nav-link">خروج از حساب</a>
@@ -54,6 +57,72 @@ if (!$session_status) {
         </div>
     </div>
 </nav>
+<div class="main">
+    <div class="overview block">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="m-1 ibox border-red">
+                    <h4 class="text-red">باکس خالی یک</h4>
+                    <hr class="text-red">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="m-1 ibox border-red">
+                    <h4 class="text-red">باکس خالی دو</h4>
+                    <hr class="text-red">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="requests none">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="m-1 ibox border-red">
+                    <h4 class="text-red">لیست درخواست ها</h4>
+                    <hr class="text-red">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="m-1 ibox border-red">
+                    <h4 class="text-red">نمایش درخواست به خصوص</h4>
+                    <hr class="text-red">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ads none">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="m-1 ibox border-red">
+                    <h4 class="text-red">لیست آگهی ها</h4>
+                    <hr class="text-red">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="m-1 ibox border-red">
+                    <h4 class="text-red">نمایش آگهی به خصوص</h4>
+                    <hr class="text-red">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="settings none">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="m-1 ibox border-red">
+                    <h4 class="text-red">تنظیمات ظاهر</h4>
+                    <hr class="text-red">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="m-1 ibox border-red">
+                    <h4 class="text-red">تنظیمات کاربر</h4>
+                    <hr class="text-red">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="<?php echo $home; ?>/resources/js/jquery-3.6.0.min.js"></script>
 <script src="<?php echo $home; ?>/resources/js/script.js"></script>

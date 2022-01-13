@@ -18,13 +18,14 @@ $session_status = $_SESSION['status'];
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ارتباط با ما</title>
     <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
-    <link href="<?php echo $home; ?>/resources/css/style.css" type="text/css" rel="stylesheet">
+    <link href="<?php echo $home; ?>/resources/sass/main.css" type="text/css" rel="stylesheet">
+<!--    <link href="--><?php //echo $home; ?><!--/resources/css/style.css" type="text/css" rel="stylesheet">-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet">
 </head>
 <body class="body">
 <nav class="navbar navbar-expand-lg navbar-light bg-blur fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand text-red" href="<?php echo $home; ?>">دکوراسیون ایران زمین</a>
+        <a class="navbar-brand text-main" href="<?php echo $home; ?>">دکوراسیون ایران زمین</a>
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
@@ -60,67 +61,67 @@ $session_status = $_SESSION['status'];
     </div>
 </nav>
 <div class="main">
-    <h1 class="text-red">ارتباط با ما</h1>
+    <h1 class="text-main">ارتباط با ما</h1>
     <br>
     <p>
         برای داشتن ارتباط مستقیم با پشتیبان های دکوراسیون ایران زمین میتوانید از طریق فرم های زیر اقدام کنید. همچنین میتوانید از راه های دیگر مثل ارسال ایمیل، تماس مستقیم و غیره نیز با ما ار ارتباط باشید.
     </p>
-    <hr class="text-red">
+    <hr class="text-main">
     <div class="row">
         <div class="col-md-6">
             <div class="m-1 p-1">
-                <h3 class="text-red">ارتباط از طریق فرم</h3>
-                <hr class="text-red">
+                <h3 class="text-main">ارتباط از طریق فرم</h3>
+                <hr class="text-main">
                 <form action="contact.php" method="post" autocomplete="off">
                     <div class="m-1">
-                        <label for="name" class="form-label text-red">نام *</label>
+                        <label for="name" class="form-label text-main">نام *</label>
                         <input id="name" name="name" type="text" class="form-control border-red"
                                placeholder="نام" required>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="m-1">
-                                <label for="mail" class="form-label text-red">ایمیل *</label>
+                                <label for="mail" class="form-label text-main">ایمیل *</label>
                                 <input id="mail" name="mail" type="email" class="form-control border-red"
                                        placeholder="ایمیل" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="m-1">
-                                <label for="mobile" class="form-label text-red">موبایل</label>
+                                <label for="mobile" class="form-label text-main">موبایل</label>
                                 <input id="mobile" name="mobile" type="number" class="form-control border-red"
                                        placeholder="موبایل">
                             </div>
                         </div>
                     </div>
                     <div class="m-1">
-                        <label for="subject" class="form-label text-red">موضوع پیام *</label>
+                        <label for="subject" class="form-label text-main">موضوع پیام *</label>
                         <input id="subject" name="subject" type="text" class="form-control border-red"
                                placeholder="موضوع" required>
                     </div>
                     <div class="m-1">
-                        <label for="text" class="form-label text-red">متن پیام *</label>
+                        <label for="text" class="form-label text-main">متن پیام *</label>
                         <textarea name="message" rows="5" id="text" class="form-control border-red" placeholder="متن پیام" required></textarea>
                     </div>
                     <br>
-                    <button name="sendmessage" class="wbtn btn-red" type="submit">ارسال پیام</button>
+                    <button name="sendmessage" class="wbtn btn-main" type="submit">ارسال پیام</button>
                 </form>
             </div>
         </div>
         <div class="col-md-6">
             <div class="p-1 m-1">
-                <h3 class="text-red">ارتباط به صورت تماس</h3>
-                <hr class="text-red">
+                <h3 class="text-main">ارتباط به صورت تماس</h3>
+                <hr class="text-main">
                 <p>
-                    <i class="fa fa-phone text-red"></i>
+                    <i class="fa fa-phone text-main"></i>
                     <span class="phone">021-361-56859</span>
                 </p>
                 <p>
-                    <i class="fa fa-mobile text-red"></i>
+                    <i class="fa fa-mobile text-main"></i>
                     <span class="phone">0901-478-4362</span>
                 </p>
                 <p>
-                    <i class="fa fa-envelope text-red"></i>
+                    <i class="fa fa-envelope text-main"></i>
                     <span class="phone">info@irandecoration.com</span>
                 </p>
                 <br>

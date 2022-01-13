@@ -17,13 +17,14 @@ $session_status = $_SESSION['status'];
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>درباره ما</title>
     <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
-    <link href="<?php echo $home; ?>/resources/css/style.css" type="text/css" rel="stylesheet">
+    <link href="<?php echo $home; ?>/resources/sass/main.css" type="text/css" rel="stylesheet">
+<!--    <link href="--><?php //echo $home; ?><!--/resources/css/style.css" type="text/css" rel="stylesheet">-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet">
 </head>
 <body class="body">
 <nav class="navbar navbar-expand-lg navbar-light bg-blur fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand text-red" href="<?php echo $home; ?>">دکوراسیون ایران زمین</a>
+        <a class="navbar-brand text-main" href="<?php echo $home; ?>">دکوراسیون ایران زمین</a>
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
@@ -59,12 +60,12 @@ $session_status = $_SESSION['status'];
     </div>
 </nav>
 <div class="main">
-    <h1 class="text-red">درباره ما</h1>
+    <h1 class="text-main">درباره ما</h1>
     <br>
     <p>
         دکوراسیون ایران زمین چیست؟ در اینجا شما میتوانید بیشتر با دکوراسیون ایران زمین آشنا شوید.
     </p>
-    <hr class="text-red">
+    <hr class="text-main">
     <p>
         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
     </p>

@@ -22,20 +22,20 @@
 }
 
 .text-main {
-  color: darkblue !important;
+  color: darkred !important;
 }
 
 .a-main {
   cursor: pointer;
-  color: darkblue !important;
+  color: darkred !important;
 }
 
 .a-main:hover {
   color: red !important;
 }
 
-.border-red {
-  border: solid 1px darkblue !important;
+.border-main {
+  border: solid 1px darkred !important;
 }
 
 .block {
@@ -49,7 +49,7 @@
 .bg-main {
   color: white;
   padding: 0 2% 2%;
-  background: darkblue;
+  background: darkred;
 }
 
 .ibtn {
@@ -69,8 +69,8 @@
 
 .btn-main {
   color: white;
-  background: darkblue;
-  border: solid 1px darkblue;
+  background: darkred;
+  border: solid 1px darkred;
   border-radius: 5px;
 }
 
@@ -91,7 +91,7 @@
 .welcome {
   position: relative;
   padding: 5%;
-  border: solid 1px darkblue;
+  border: solid 1px darkred;
 }
 
 .welcome p {
@@ -109,7 +109,7 @@
 .auth-error {
   position: relative;
   padding: 5%;
-  border: solid 1px darkblue;
+  border: solid 1px darkred;
 }
 
 .auth-error .close-box {

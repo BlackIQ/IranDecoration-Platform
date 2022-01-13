@@ -7,4 +7,4 @@ $connection = mysqli_connect('localhost', 'amir', 'amir', 'irandecoration');
 $home = 'http://192.168.1.4/IranDecoration-Platform';
 
 // Color
-$primary = 'darkblue';
+$primary = 'darkred';

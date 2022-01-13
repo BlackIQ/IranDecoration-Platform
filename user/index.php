@@ -26,13 +26,14 @@ $user_id = $_USER['id'];
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>داشبورد کاربر</title>
     <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
-    <link href="<?php echo $home; ?>/resources/css/style.css" type="text/css" rel="stylesheet">
+    <link href="<?php echo $home; ?>/resources/sass/main.css" type="text/css" rel="stylesheet">
+<!--    <link href="--><?php //echo $home; ?><!--/resources/css/style.css" type="text/css" rel="stylesheet">-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet">
 </head>
 <body class="body">
 <nav class="navbar navbar-expand-lg navbar-light bg-blur fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand text-red" href="<?php echo $home; ?>">دکوراسیون ایران زمین</a>
+        <a class="navbar-brand text-main" href="<?php echo $home; ?>">دکوراسیون ایران زمین</a>
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
@@ -40,7 +41,7 @@ $user_id = $_USER['id'];
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <span id="overview-link" class="nav-link user-nav-link active text-red">نگاه کلی</span>
+                    <span id="overview-link" class="nav-link user-nav-link active text-main">نگاه کلی</span>
                 </li>
                 <li class="nav-item">
                     <span id="requests-link" class="nav-link user-nav-link">درخواست ها</span>
@@ -67,14 +68,14 @@ $user_id = $_USER['id'];
         <div class="row">
             <div class="col-md-6">
                 <div class="m-1 ibox border-red">
-                    <h4 class="text-red">باکس خالی یک</h4>
-                    <hr class="text-red">
+                    <h4 class="text-main">باکس خالی یک</h4>
+                    <hr class="text-main">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="m-1 ibox border-red">
-                    <h4 class="text-red">باکس خالی دو</h4>
-                    <hr class="text-red">
+                    <h4 class="text-main">باکس خالی دو</h4>
+                    <hr class="text-main">
                 </div>
             </div>
         </div>
@@ -83,14 +84,14 @@ $user_id = $_USER['id'];
         <div class="row">
             <div class="col-md-6">
                 <div class="m-1 ibox border-red">
-                    <h4 class="text-red">لیست درخواست ها</h4>
-                    <hr class="text-red">
+                    <h4 class="text-main">لیست درخواست ها</h4>
+                    <hr class="text-main">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="m-1 ibox border-red">
-                    <h4 class="text-red">نمایش درخواست به خصوص</h4>
-                    <hr class="text-red">
+                    <h4 class="text-main">نمایش درخواست به خصوص</h4>
+                    <hr class="text-main">
                 </div>
             </div>
         </div>
@@ -99,8 +100,8 @@ $user_id = $_USER['id'];
         <div class="row">
             <div class="col-md-6">
                 <div class="m-1 ibox border-red">
-                    <h4 class="text-red">لیست آگهی ها</h4>
-                    <hr class="text-red">
+                    <h4 class="text-main">لیست آگهی ها</h4>
+                    <hr class="text-main">
                     <div>
                         <?php
                         $get_posts = mysqli_query($connection, "SELECT * FROM posts WHERE user = '$user_id'");
@@ -125,8 +126,8 @@ $user_id = $_USER['id'];
             </div>
             <div class="col-md-6">
                 <div class="m-1 ibox border-red">
-                    <h4 class="text-red">نمایش آگهی به خصوص</h4>
-                    <hr class="text-red">
+                    <h4 class="text-main">نمایش آگهی به خصوص</h4>
+                    <hr class="text-main">
                 </div>
             </div>
         </div>
@@ -135,14 +136,14 @@ $user_id = $_USER['id'];
         <div class="row">
             <div class="col-md-6">
                 <div class="m-1 ibox border-red">
-                    <h4 class="text-red">تنظیمات ظاهر</h4>
-                    <hr class="text-red">
+                    <h4 class="text-main">تنظیمات ظاهر</h4>
+                    <hr class="text-main">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="m-1 ibox border-red">
-                    <h4 class="text-red">تنظیمات کاربر</h4>
-                    <hr class="text-red">
+                    <h4 class="text-main">تنظیمات کاربر</h4>
+                    <hr class="text-main">
                 </div>
             </div>
         </div>
@@ -184,23 +185,23 @@ $user_id = $_USER['id'];
                 </div>
                 <div class="modal-body">
                     <div class="m-1">
-                        <label for="adname" class="form-label text-red">نام آگهی *</label>
+                        <label for="adname" class="form-label text-main">نام آگهی *</label>
                         <input id="adname" name="adname" type="text" class="form-control border-red"
                                placeholder="نام آگهی" required>
                     </div>
                     <div class="m-1">
-                        <label for="caption" class="form-label text-red">توضیحات آگهی *</label>
+                        <label for="caption" class="form-label text-main">توضیحات آگهی *</label>
                         <textarea name="caption" rows="5" id="caption" class="form-control border-red"
                                   placeholder="توضیحات آگهی" required></textarea>
                     </div>
                     <div class="m-1">
-                        <label for="city" class="form-label text-red">شهر *</label>
+                        <label for="city" class="form-label text-main">شهر *</label>
                         <input id="city" name="city" type="text" class="form-control border-red"
                                placeholder="شهر" required>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button name="addnewad" class="wbtn btn-red" type="submit">ثبت آگهی</button>
+                    <button name="addnewad" class="wbtn btn-main" type="submit">ثبت آگهی</button>
                 </div>
             </div>
         </form>

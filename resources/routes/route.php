@@ -4,6 +4,12 @@ session_start();
 
 include('../config/config.php');
 
+$session_status = $_SESSION['status'];
+
+if ($session_status) {
+    $_USER = $_SESSION['user'];
+}
+
 $errors = array();
 
 // Login user
@@ -87,7 +93,7 @@ if (isset($_POST['register'])) {
     }
 }
 
-// Register user
+// Send message
 if (isset($_POST['sendmessage'])) {
     $name = mysqli_real_escape_string($connection, $_POST['name']);
     $mail = mysqli_real_escape_string($connection, $_POST['mail']);
@@ -120,6 +126,39 @@ if (isset($_POST['sendmessage'])) {
             <script>showAlert('پیام شما با موفقیت ارسال شد.');</script>
             <?php
             header('Location: ' . $home . '/pages/contact.php');
+        }
+        else {
+            array_push($errors, mysqli_error($connection));
+        }
+    }
+}
+
+// Add new advertisement
+if (isset($_POST['addnewad'])) {
+    $name = mysqli_real_escape_string($connection, $_POST['adname']);
+    $caption = mysqli_real_escape_string($connection, $_POST['caption']);
+    $city = mysqli_real_escape_string($connection, $_POST['city']);
+
+    if (empty($name)) {
+        array_push($errors, 'نام آگهی الزامیست');
+    }
+    if (empty($caption)) {
+        array_push($errors, 'توضیحات آگهی الزامیست');
+    }
+    if (empty($city)) {
+        array_push($errors, 'شهر آگهی الزامیست');
+    }
+
+    if (count($errors) == 0) {
+        $id = rand(11111111, 99999999);
+        $date = date("M d, Y H:i:s");
+        $user = $_USER['id'];
+        $query = mysqli_query($connection, "INSERT INTO posts (id, name, caption, date, city, user, category) VALUES ('$id', '$name', '$caption', '$date', '$city', '$user', 'Kitchen')");
+        if ($query) {
+            ?>
+            <script>showAlert('آگهی با موفقیت ثبت شد.');</script>
+            <?php
+            header('Location: ' . $home . '/client');
         }
         else {
             array_push($errors, mysqli_error($connection));

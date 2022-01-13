@@ -5,6 +5,7 @@
 .body {
   direction: rtl;
   text-align: right;
+  background: #f1f1f1;
   font-family: "iransans", serif;
 }
 
@@ -58,6 +59,10 @@
   display: none;
 }
 
+.auth-box {
+  padding: 2%;
+}
+
 .bg-main {
   color: white;
   padding: 0 2% 2%;
@@ -70,7 +75,7 @@
 }
 
 .ibox {
-  padding: 2%;
+  padding: 1%;
   border-radius: 5px;
 }
 
@@ -92,11 +97,6 @@
 }
 
 .artpic {
-  background: url("https://wallpapercave.com/wp/wp3016972.jpg") no-repeat fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
   height: 100vh;
 }
 

@@ -74,7 +74,7 @@ $get_all_posts = mysqli_query($connection, 'SELECT * FROM posts ORDER BY row DES
             while ($post = mysqli_fetch_assoc($get_all_posts)) {
                 ?>
                 <div class="col-md-3">
-                    <div class="post border-red m-1 pointer" onclick="changeUrl('post.php?post=<?php echo $post['id']; ?>');">
+                    <div class="post border-main m-1 pointer" onclick="changeUrl('post.php?post=<?php echo $post['id']; ?>');">
                         <div class="post-head">
                             <p class="text-main"><?php echo $post['name']; ?></p>
                         </div>

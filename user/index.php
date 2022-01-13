@@ -67,13 +67,13 @@ $user_id = $_USER['id'];
     <div class="overview block">
         <div class="row">
             <div class="col-md-6">
-                <div class="m-1 ibox border-red">
+                <div class="m-1 ibox border-main">
                     <h4 class="text-main">باکس خالی یک</h4>
                     <hr class="text-main">
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="m-1 ibox border-red">
+                <div class="m-1 ibox border-main">
                     <h4 class="text-main">باکس خالی دو</h4>
                     <hr class="text-main">
                 </div>
@@ -83,13 +83,13 @@ $user_id = $_USER['id'];
     <div class="requests none">
         <div class="row">
             <div class="col-md-6">
-                <div class="m-1 ibox border-red">
+                <div class="m-1 ibox border-main">
                     <h4 class="text-main">لیست درخواست ها</h4>
                     <hr class="text-main">
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="m-1 ibox border-red">
+                <div class="m-1 ibox border-main">
                     <h4 class="text-main">نمایش درخواست به خصوص</h4>
                     <hr class="text-main">
                 </div>
@@ -99,7 +99,7 @@ $user_id = $_USER['id'];
     <div class="ads none">
         <div class="row">
             <div class="col-md-6">
-                <div class="m-1 ibox border-red">
+                <div class="m-1 ibox border-main">
                     <h4 class="text-main">لیست آگهی ها</h4>
                     <hr class="text-main">
                     <div>
@@ -125,7 +125,7 @@ $user_id = $_USER['id'];
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="m-1 ibox border-red">
+                <div class="m-1 ibox border-main">
                     <h4 class="text-main">نمایش آگهی به خصوص</h4>
                     <hr class="text-main">
                 </div>
@@ -135,13 +135,13 @@ $user_id = $_USER['id'];
     <div class="settings none">
         <div class="row">
             <div class="col-md-6">
-                <div class="m-1 ibox border-red">
+                <div class="m-1 ibox border-main">
                     <h4 class="text-main">تنظیمات ظاهر</h4>
                     <hr class="text-main">
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="m-1 ibox border-red">
+                <div class="m-1 ibox border-main">
                     <h4 class="text-main">تنظیمات کاربر</h4>
                     <hr class="text-main">
                 </div>
@@ -186,17 +186,17 @@ $user_id = $_USER['id'];
                 <div class="modal-body">
                     <div class="m-1">
                         <label for="adname" class="form-label text-main">نام آگهی *</label>
-                        <input id="adname" name="adname" type="text" class="form-control border-red"
+                        <input id="adname" name="adname" type="text" class="form-control border-main"
                                placeholder="نام آگهی" required>
                     </div>
                     <div class="m-1">
                         <label for="caption" class="form-label text-main">توضیحات آگهی *</label>
-                        <textarea name="caption" rows="5" id="caption" class="form-control border-red"
+                        <textarea name="caption" rows="5" id="caption" class="form-control border-main"
                                   placeholder="توضیحات آگهی" required></textarea>
                     </div>
                     <div class="m-1">
                         <label for="city" class="form-label text-main">شهر *</label>
-                        <input id="city" name="city" type="text" class="form-control border-red"
+                        <input id="city" name="city" type="text" class="form-control border-main"
                                placeholder="شهر" required>
                     </div>
                 </div>

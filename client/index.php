@@ -53,14 +53,14 @@ if ($session_status == true) {
                         <div class="col-md-6">
                             <div class="p-1 m-1">
                                 <label for="mail" class="form-label text-main">ایمیل خود را وارد کنید</label>
-                                <input id="mail" name="mail" type="email" class="form-control border-red"
+                                <input id="mail" name="mail" type="email" class="form-control border-main"
                                        placeholder="ایمیل">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="p-1 m-1">
                                 <label for="pass" class="form-label text-main">رمز خود را وارد کنید</label>
-                                <input id="pass" name="pass" type="password" class="form-control border-red"
+                                <input id="pass" name="pass" type="password" class="form-control border-main"
                                        placeholder="رمز">
                             </div>
                         </div>
@@ -83,14 +83,14 @@ if ($session_status == true) {
                         <div class="col-md-6">
                             <div class="p-1 m-1">
                                 <label for="fname" class="form-label text-main">نام خود را وارد کنید</label>
-                                <input id="fname" name="fname" type="text" class="form-control border-red"
+                                <input id="fname" name="fname" type="text" class="form-control border-main"
                                        placeholder="نام">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="p-1 m-1">
                                 <label for="lname" class="form-label text-main">نام خانوادگی خود را وارد کنید</label>
-                                <input id="lname" name="lname" type="text" class="form-control border-red"
+                                <input id="lname" name="lname" type="text" class="form-control border-main"
                                        placeholder="نام خانوادگی">
                             </div>
                         </div>
@@ -99,14 +99,14 @@ if ($session_status == true) {
                         <div class="col-md-6">
                             <div class="p-1 m-1">
                                 <label for="mail" class="form-label text-main">ایمیل خود را وارد کنید</label>
-                                <input id="mail" name="mail" type="email" class="form-control border-red"
+                                <input id="mail" name="mail" type="email" class="form-control border-main"
                                        placeholder="ایمیل">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="p-1 m-1">
                                 <label for="phone" class="form-label text-main">موبایل خود را وارد کنید</label>
-                                <input id="phone" name="phone" type="number" class="form-control border-red"
+                                <input id="phone" name="phone" type="number" class="form-control border-main"
                                        placeholder="9---">
                             </div>
                         </div>
@@ -115,14 +115,14 @@ if ($session_status == true) {
                         <div class="col-md-6">
                             <div class="p-1 m-1">
                                 <label for="pass" class="form-label text-main">رمز خود را وارد کنید</label>
-                                <input id="pass" name="pass" type="password" class="form-control border-red"
+                                <input id="pass" name="pass" type="password" class="form-control border-main"
                                        placeholder="رمز">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="p-1 m-1">
                                 <label for="rpass" class="form-label text-main">تکرار رمز خود را وارد کنید</label>
-                                <input id="rpass" name="rpass" type="password" class="form-control border-red"
+                                <input id="rpass" name="rpass" type="password" class="form-control border-main"
                                        placeholder="تایید رمز">
                             </div>
                         </div>

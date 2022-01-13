@@ -68,7 +68,7 @@ $session_status = $_SESSION['status'];
     <hr class="text-main">
     <div class="row">
         <div class="col-md-6">
-            <div class="faq border-red m-1">
+            <div class="faq border-main m-1">
                 <div class="faq-question">
                     <h3 class="text-main">ایران دکوراسیون چیست؟</h3>
                 </div>
@@ -80,7 +80,7 @@ $session_status = $_SESSION['status'];
             </div>
         </div>
         <div class="col-md-6">
-            <div class="faq border-red m-1">
+            <div class="faq border-main m-1">
                 <div class="faq-question">
                     <h3 class="text-main">چرا دکوراسیون ایران زمین؟</h3>
                 </div>

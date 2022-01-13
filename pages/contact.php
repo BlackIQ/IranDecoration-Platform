@@ -75,33 +75,33 @@ $session_status = $_SESSION['status'];
                 <form action="contact.php" method="post" autocomplete="off">
                     <div class="m-1">
                         <label for="name" class="form-label text-main">نام *</label>
-                        <input id="name" name="name" type="text" class="form-control border-red"
+                        <input id="name" name="name" type="text" class="form-control border-main"
                                placeholder="نام" required>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="m-1">
                                 <label for="mail" class="form-label text-main">ایمیل *</label>
-                                <input id="mail" name="mail" type="email" class="form-control border-red"
+                                <input id="mail" name="mail" type="email" class="form-control border-main"
                                        placeholder="ایمیل" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="m-1">
                                 <label for="mobile" class="form-label text-main">موبایل</label>
-                                <input id="mobile" name="mobile" type="number" class="form-control border-red"
+                                <input id="mobile" name="mobile" type="number" class="form-control border-main"
                                        placeholder="موبایل">
                             </div>
                         </div>
                     </div>
                     <div class="m-1">
                         <label for="subject" class="form-label text-main">موضوع پیام *</label>
-                        <input id="subject" name="subject" type="text" class="form-control border-red"
+                        <input id="subject" name="subject" type="text" class="form-control border-main"
                                placeholder="موضوع" required>
                     </div>
                     <div class="m-1">
                         <label for="text" class="form-label text-main">متن پیام *</label>
-                        <textarea name="message" rows="5" id="text" class="form-control border-red" placeholder="متن پیام" required></textarea>
+                        <textarea name="message" rows="5" id="text" class="form-control border-main" placeholder="متن پیام" required></textarea>
                     </div>
                     <br>
                     <button name="sendmessage" class="wbtn btn-main" type="submit">ارسال پیام</button>

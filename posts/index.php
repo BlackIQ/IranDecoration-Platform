@@ -6,6 +6,8 @@ include('../resources/config/config.php');
 
 $session_status = $_SESSION['status'];
 
+$get_all_posts = mysqli_query($connection, 'SELECT * FROM posts ORDER BY row DESC');
+
 ?>
 
 <!doctype html>
@@ -66,25 +68,34 @@ $session_status = $_SESSION['status'];
     </p>
     <hr class="text-red">
     <div class="row">
-        <div class="col-md-3">
-            <div class="post border-red m-1">
-                <div class="post-head">
-                    <p class="text-red"><a href="#" class="a-red">دکوراسیون آشپزخانه</a></p>
+        <?php
+        if (mysqli_num_rows($get_all_posts) != 0) {
+            while ($post = mysqli_fetch_assoc($get_all_posts)) {
+                ?>
+                <div class="col-md-3">
+                    <div class="post border-red m-1">
+                        <div class="post-head">
+                            <p class="text-red"><a href="post.php?post=<?php echo $post['id']; ?>" class="a-red"><?php echo $post['name']; ?></a></p>
+                        </div>
+                        <div class="post-content">
+                            <p><?php echo $post['caption']; ?></p>
+                        </div>
+                        <hr class="text-red">
+                        <span class="post-more pointer text-red">اطلاعات بیشتر</span>
+                        <div class="post-footer">
+                            <br>
+                            <p><i class="text-red fa fa-map-marker"></i> <?php echo $post['city']; ?></p>
+                            <p><i class="text-red fa fa-calendar"></i> <?php echo $post['date']; ?></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="post-content">
-                    <p>
-                        یک دکوراسیون آشپزخانه نیازمند هستیم.
-                    </p>
-                </div>
-                <hr class="text-red">
-                <span class="post-more pointer text-red">اطلاعات بیشتر</span>
-                <div class="post-footer">
-                    <br>
-                    <p><i class="text-red fa fa-map-marker"></i> قرچک</p>
-                    <p><i class="text-red fa fa-calendar"></i> ۱۲/۵/۱۴۰۰</p>
-                </div>
-            </div>
-        </div>
+                <?php
+            }
+        }
+        else {
+            echo '<h3>آگهی جدیدی ثبت نشده است.</h3>';
+        }
+        ?>
     </div>
 </div>
 

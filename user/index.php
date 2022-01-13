@@ -11,6 +11,10 @@ if (!$session_status) {
     header('Location: ' . $home . '/client');
 }
 
+$_USER = $_SESSION['user'];
+
+$user_id = $_USER['id'];
+
 ?>
 
 <!doctype html>
@@ -97,6 +101,26 @@ if (!$session_status) {
                 <div class="m-1 ibox border-red">
                     <h4 class="text-red">لیست آگهی ها</h4>
                     <hr class="text-red">
+                    <div>
+                        <?php
+                        $get_posts = mysqli_query($connection, "SELECT * FROM posts WHERE user = '$user_id'");
+                        if (mysqli_num_rows($get_posts) != 0) {
+                            while ($post = mysqli_fetch_assoc($get_posts)) {
+                                ?>
+                                <p onclick="changeUrl('?postid=<?php echo $post['id']; ?>');" class="pointer">
+                                    <span class="font-weight-bold"><?php echo $post['name']; ?></span>
+                                    <span class="float-start">
+                                        <?php echo $post['date']; ?>
+                                    </span>
+                                </p>
+                                <?php
+                            }
+                        }
+                        else {
+                            echo '<h5>شما تا کنون آگهی ثبت نکرده اید.</h5>';
+                        }
+                        ?>
+                    </div>
                 </div>
             </div>
             <div class="col-md-6">

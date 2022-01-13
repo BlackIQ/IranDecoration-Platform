@@ -123,6 +123,26 @@ if (!$session_status) {
             </div>
         </div>
     </div>
+    <?php
+    if (count($errors) > 0) {
+        ?>
+        <div class="alert alert-danger error-box">
+            <ul>
+                <?php
+                foreach ($errors as $error) {
+                    ?>
+                    <li><?php echo $error; ?></li>
+                    <?php
+                }
+                ?>
+            </ul>
+            <div class="close-error">
+                <button class="btn btn-outline-danger">پنهان سازی</button>
+            </div>
+        </div>
+        <?php
+    }
+    ?>
 </div>
 <script src="<?php echo $home; ?>/resources/js/jquery-3.6.0.min.js"></script>
 <script src="<?php echo $home; ?>/resources/js/script.js"></script>
@@ -151,7 +171,7 @@ if (!$session_status) {
                     </div>
                     <div class="m-1">
                         <label for="city" class="form-label text-red">شهر *</label>
-                        <input id="city" name="adname" type="text" class="form-control border-red"
+                        <input id="city" name="city" type="text" class="form-control border-red"
                                placeholder="شهر" required>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-$mainColor: darkred
+$primaryColor: darkred
 
 @font-face
   font-family: 'iransans'
@@ -16,18 +16,21 @@ $mainColor: darkred
 .pointer
   cursor: pointer
 
+.active
+  color: $primaryColor !important
+
 .phone
   text-align: left
   direction: ltr
 
 
 .text-main
-  color: $mainColor !important
+  color: $primaryColor !important
 
 
 .a-main
   cursor: pointer
-  color: $mainColor !important
+  color: $primaryColor !important
 
 
 .a-main
@@ -36,8 +39,13 @@ $mainColor: darkred
 
 
 .border-main
-  border: solid 1px $mainColor !important
+  border: solid 1px $primaryColor !important
 
+.border-right
+  border-right: solid 1px $primaryColor
+
+.border-left
+  border-left: solid 1px $primaryColor
 
 .block
   display: block
@@ -50,7 +58,7 @@ $mainColor: darkred
 .bg-main
   color: white
   padding: 0 2% 2%
-  background: $mainColor
+  background: $primaryColor
 
 
 .ibtn
@@ -70,8 +78,8 @@ $mainColor: darkred
 
 .btn-main
   color: white
-  background: $mainColor
-  border: solid 1px $mainColor
+  background: $primaryColor
+  border: solid 1px $primaryColor
   border-radius: 5px
 
 
@@ -92,7 +100,7 @@ $mainColor: darkred
 .welcome
   position: relative
   padding: 5%
-  border: solid 1px $mainColor
+  border: solid 1px $primaryColor
 
 .welcome p
   font-size: 80%
@@ -107,7 +115,7 @@ $mainColor: darkred
 .auth-error
   position: relative
   padding: 5%
-  border: solid 1px $mainColor
+  border: solid 1px $primaryColor
 
 .auth-error .close-box
   cursor: pointer

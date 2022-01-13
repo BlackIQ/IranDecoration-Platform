@@ -16,6 +16,10 @@
   cursor: pointer;
 }
 
+.active {
+  color: darkred !important;
+}
+
 .phone {
   text-align: left;
   direction: ltr;
@@ -36,6 +40,14 @@
 
 .border-main {
   border: solid 1px darkred !important;
+}
+
+.border-right {
+  border-right: solid 1px darkred;
+}
+
+.border-left {
+  border-left: solid 1px darkred;
 }
 
 .block {

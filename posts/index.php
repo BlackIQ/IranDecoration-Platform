@@ -19,7 +19,7 @@ $get_all_posts = mysqli_query($connection, 'SELECT * FROM posts ORDER BY row DES
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>آگهی ها</title>
     <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
-    <link href="<?php echo $home; ?>/resources/css/main.css" type="text/css" rel="stylesheet">
+    <link href="<?php echo $home; ?>/resources/css/style.css" type="text/css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet">
 </head>
 <body class="body">
@@ -73,9 +73,9 @@ $get_all_posts = mysqli_query($connection, 'SELECT * FROM posts ORDER BY row DES
             while ($post = mysqli_fetch_assoc($get_all_posts)) {
                 ?>
                 <div class="col-md-3">
-                    <div class="post border-red m-1">
+                    <div class="post border-red m-1 pointer" onclick="changeUrl('post.php?post=<?php echo $post['id']; ?>');">
                         <div class="post-head">
-                            <p class="text-red"><a href="post.php?post=<?php echo $post['id']; ?>" class="a-red"><?php echo $post['name']; ?></a></p>
+                            <p class="text-red"><?php echo $post['name']; ?></p>
                         </div>
                         <div class="post-content">
                             <p><?php echo $post['caption']; ?></p>
@@ -98,7 +98,7 @@ $get_all_posts = mysqli_query($connection, 'SELECT * FROM posts ORDER BY row DES
         ?>
     </div>
 </div>
-
+<?php include('../resources/widgets/footer.php'); ?>
 <script src="<?php echo $home; ?>/resources/js/jquery-3.6.0.min.js"></script>
 <script src="<?php echo $home; ?>/resources/js/script.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.js"></script>

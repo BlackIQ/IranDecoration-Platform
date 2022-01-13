@@ -30,14 +30,14 @@ $('#ads-link').click(function () {
         for (const navKey in navs) {
             if ($(navs[navKey]).hasClass('active')) {
                 $(navs[navKey]).removeClass('active');
-                $(navs[navKey]).removeClass('text-red');
+                $(navs[navKey]).removeClass('text-main');
             }
         }
-        $(this).addClass('text-red');
+        $(this).addClass('text-main');
         $(this).addClass('active');
         $('.ads').removeClass('none');
         $('.ads').addClass('block');
-        $(this).addClass('text-red');
+        $(this).addClass('text-main');
         $(this).addClass('active');
     }
 });
@@ -53,10 +53,10 @@ $('#requests-link').click(function () {
         for (const navKey in navs) {
             if ($(navs[navKey]).hasClass('active')) {
                 $(navs[navKey]).removeClass('active');
-                $(navs[navKey]).removeClass('text-red');
+                $(navs[navKey]).removeClass('text-main');
             }
         }
-        $(this).addClass('text-red');
+        $(this).addClass('text-main');
         $(this).addClass('active');
         $('.requests').removeClass('none');
         $('.requests').addClass('block');
@@ -74,10 +74,10 @@ $('#settings-link').click(function () {
         for (const navKey in navs) {
             if ($(navs[navKey]).hasClass('active')) {
                 $(navs[navKey]).removeClass('active');
-                $(navs[navKey]).removeClass('text-red');
+                $(navs[navKey]).removeClass('text-main');
             }
         }
-        $(this).addClass('text-red');
+        $(this).addClass('text-main');
         $(this).addClass('active');
         $('.settings').removeClass('none');
         $('.settings').addClass('block');
@@ -95,10 +95,10 @@ $('#overview-link').click(function () {
         for (const navKey in navs) {
             if ($(navs[navKey]).hasClass('active')) {
                 $(navs[navKey]).removeClass('active');
-                $(navs[navKey]).removeClass('text-red');
+                $(navs[navKey]).removeClass('text-main');
             }
         }
-        $(this).addClass('text-red');
+        $(this).addClass('text-main');
         $(this).addClass('active');
         $('.overview').removeClass('none');
         $('.overview').addClass('block');

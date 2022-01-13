@@ -22,122 +22,75 @@ if ($session_status == true) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ورود به پنل کاربری</title>
     <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
-    <link href="../resources/css/style.css" type="text/css" rel="stylesheet">
+    <link href="<?php echo $home; ?>/resources/sass/main.css" type="text/css" rel="stylesheet">
+<!--    <link href="../resources/css/style.css" type="text/css" rel="stylesheet">-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet">
 </head>
-<body class="body">
-<div class="container-fluid">
+<body class="body artpic">
+<nav class="navbar navbar-expand-lg navbar-light bg-blur fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand text-main" href="<?php echo $home; ?>">دکوراسیون ایران زمین</a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo $home; ?>">خانه</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo $home; ?>/pages/about.php">درباره ما</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo $home; ?>/pages/faq.php">سوالات متداول</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo $home; ?>/pages/contact.php">ارتباط با ما</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo $home; ?>/posts">اگهی ها</a>
+                </li>
+            </ul>
+            <div class="me-auto">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="<?php echo $home; ?>/client">ورود یا ثبت نام</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="main">
     <div class="row">
-        <div class="col-md-6 vh-100 p-5 overflow-y-scroll">
-            <div class="welcome">
-                <h3 class="text-main">به دکوراسیون ایران زمین خوش آمدید!</h3>
-                <br>
-                <p>
-                    دکوراسیون ایران زمین یک شرکت برای طراحی، ساخت و راه اندازی دکور های شما میباشد.
-                </p>
-                <p>
-                    اگر حساب کاربری دارید میتوانید با استفاده از آن وارد شوید و یا با لینک زیر فرم به صفحه ثبت نام
-                    بروید.
-                </p>
-                <i class="fa fa-times text-main close-box"></i>
-            </div>
-            <br>
-            <div id="register-box" style="display: block">
-                <h4 class="text-main">
-                    ورود کاربر
-                    <i class="fa fa-home float-start pointer" onclick="return changeUrl('../');"></i>
-                </h4>
-                <hr class="text-main">
-                <form action="index.php" method="post" autocomplete="off">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="p-1 m-1">
-                                <label for="mail" class="form-label text-main">ایمیل خود را وارد کنید</label>
-                                <input id="mail" name="mail" type="email" class="form-control border-main"
-                                       placeholder="ایمیل">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="p-1 m-1">
-                                <label for="pass" class="form-label text-main">رمز خود را وارد کنید</label>
-                                <input id="pass" name="pass" type="password" class="form-control border-main"
-                                       placeholder="رمز">
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <button name="login" class="ibtn btn-main" type="submit">ورود</button>
+        <div class="col-md-6">
+            <div class="m-1">
+                <div id="auth-box block">
+                    <h4 class="text-main">
+                        ورود کاربر
+                    </h4>
                     <hr class="text-main">
-                    <a class="text-decoration-none a-main" onclick="return changeBox('login-box', 'register-box');">ثبت
-                        نام</a>
-                </form>
-            </div>
-            <div id="login-box" style="display: none;">
-                <h4 class="text-main">
-                    ثبت نام کاربر
-                    <i class="fa fa-home float-start pointer" onclick="return changeUrl('../');"></i>
-                </h4>
-                <hr class="text-main">
-                <form action="index.php" method="post" autocomplete="off">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="p-1 m-1">
-                                <label for="fname" class="form-label text-main">نام خود را وارد کنید</label>
-                                <input id="fname" name="fname" type="text" class="form-control border-main"
-                                       placeholder="نام">
+                    <form action="index.php" method="post" autocomplete="off">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="p-1 m-1">
+                                    <label for="mail" class="form-label text-main">ایمیل خود را وارد کنید</label>
+                                    <input id="mail" name="mail" type="email" class="form-control border-main"
+                                           placeholder="ایمیل">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-1 m-1">
+                                    <label for="pass" class="form-label text-main">رمز خود را وارد کنید</label>
+                                    <input id="pass" name="pass" type="password" class="form-control border-main"
+                                           placeholder="رمز">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="p-1 m-1">
-                                <label for="lname" class="form-label text-main">نام خانوادگی خود را وارد کنید</label>
-                                <input id="lname" name="lname" type="text" class="form-control border-main"
-                                       placeholder="نام خانوادگی">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="p-1 m-1">
-                                <label for="mail" class="form-label text-main">ایمیل خود را وارد کنید</label>
-                                <input id="mail" name="mail" type="email" class="form-control border-main"
-                                       placeholder="ایمیل">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="p-1 m-1">
-                                <label for="phone" class="form-label text-main">موبایل خود را وارد کنید</label>
-                                <input id="phone" name="phone" type="number" class="form-control border-main"
-                                       placeholder="9---">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="p-1 m-1">
-                                <label for="pass" class="form-label text-main">رمز خود را وارد کنید</label>
-                                <input id="pass" name="pass" type="password" class="form-control border-main"
-                                       placeholder="رمز">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="p-1 m-1">
-                                <label for="rpass" class="form-label text-main">تکرار رمز خود را وارد کنید</label>
-                                <input id="rpass" name="rpass" type="password" class="form-control border-main"
-                                       placeholder="تایید رمز">
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="">
-                        <input id="agree" name="agree" class="form-check-input" value="agree" type="checkbox">
-                        <label for="agree" class="form-check-label text-main">با ثبت نام و کلیک روی دکمه ثبت نام با
-                            قوانین دکوراسیون ایران موافق هستم.</label>
-                    </div>
-                    <br>
-                    <button name="register" class="ibtn btn-main" type="submit">ثبت نام</button>
-                </form>
-                <hr class="text-main">
-                <a class="text-decoration-none a-main" onclick="return changeBox('register-box', 'login-box');">ورود</a>
+                        <br>
+                        <button name="login" class="wbtn btn-main" type="submit">ورود</button>
+                </div>
             </div>
             <br>
             <?php
@@ -161,7 +114,73 @@ if ($session_status == true) {
             }
             ?>
         </div>
-        <div class="col-md-6 artpic">
+        <div class="col-md-6">
+            <div class="m-1">
+                <div id="auth-box block">
+                    <h4 class="text-main">
+                        ثبت نام کاربر
+                    </h4>
+                    <hr class="text-main">
+                    <form action="index.php" method="post" autocomplete="off">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="p-1 m-1">
+                                    <label for="fname" class="form-label text-main">نام خود را وارد کنید</label>
+                                    <input id="fname" name="fname" type="text" class="form-control border-main"
+                                           placeholder="نام">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-1 m-1">
+                                    <label for="lname" class="form-label text-main">نام خانوادگی خود را وارد کنید</label>
+                                    <input id="lname" name="lname" type="text" class="form-control border-main"
+                                           placeholder="نام خانوادگی">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="p-1 m-1">
+                                    <label for="mail" class="form-label text-main">ایمیل خود را وارد کنید</label>
+                                    <input id="mail" name="mail" type="email" class="form-control border-main"
+                                           placeholder="ایمیل">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-1 m-1">
+                                    <label for="phone" class="form-label text-main">موبایل خود را وارد کنید</label>
+                                    <input id="phone" name="phone" type="number" class="form-control border-main"
+                                           placeholder="9---">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="p-1 m-1">
+                                    <label for="pass" class="form-label text-main">رمز خود را وارد کنید</label>
+                                    <input id="pass" name="pass" type="password" class="form-control border-main"
+                                           placeholder="رمز">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-1 m-1">
+                                    <label for="rpass" class="form-label text-main">تکرار رمز خود را وارد کنید</label>
+                                    <input id="rpass" name="rpass" type="password" class="form-control border-main"
+                                           placeholder="تایید رمز">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="">
+                            <input id="agree" name="agree" class="form-check-input" value="agree" type="checkbox">
+                            <label for="agree" class="form-check-label text-main">با ثبت نام و کلیک روی دکمه ثبت نام با
+                                قوانین دکوراسیون ایران موافق هستم.</label>
+                        </div>
+                        <br>
+                        <button name="register" class="wbtn btn-main" type="submit">ثبت نام</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>

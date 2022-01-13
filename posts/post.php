@@ -30,13 +30,14 @@ else {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>نمایش آگهی</title>
     <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
-    <link href="<?php echo $home; ?>/resources/css/style.css" type="text/css" rel="stylesheet">
+    <link href="<?php echo $home; ?>/resources/sass/main.css" type="text/css" rel="stylesheet">
+<!--    <link href="--><?php //echo $home; ?><!--/resources/css/style.css" type="text/css" rel="stylesheet">-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet">
 </head>
 <body class="body">
 <nav class="navbar navbar-expand-lg navbar-light bg-blur fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand text-red" href="<?php echo $home; ?>">دکوراسیون ایران زمین</a>
+        <a class="navbar-brand text-main" href="<?php echo $home; ?>">دکوراسیون ایران زمین</a>
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
@@ -75,30 +76,30 @@ else {
     <div class="row">
         <div class="col-md-6">
             <div class="m-1 ibox" style="border-right: solid 1px darkred;">
-                <h3 class="text-red"><?php echo $post['name']; ?></h3>
+                <h3 class="text-main"><?php echo $post['name']; ?></h3>
                 <br>
                 <p><?php echo $post['caption']; ?></p>
             </div>
         </div>
         <div class="col-md-6">
             <div class="m-1 ibox" style="border-right: solid 1px darkred;">
-                <h4 class="text-red">تماس و اطلاعات بیشتر</h4>
+                <h4 class="text-main">تماس و اطلاعات بیشتر</h4>
                 <br>
                 <p>
-                    <i class="fa fa-mobile text-red"></i>
+                    <i class="fa fa-mobile text-main"></i>
                     <span class="phone"><?php echo $user['phone']; ?></span>
                 </p>
                 <p>
-                    <i class="fa fa-envelope text-red"></i>
+                    <i class="fa fa-envelope text-main"></i>
                     <span class="phone"><?php echo $user['mail']; ?></span>
                 </p>
                 <br>
                 <p>
-                    <i class="fa fa-map-marker text-red"></i>
+                    <i class="fa fa-map-marker text-main"></i>
                     <span class="phone"><?php echo $post['city']; ?></span>
                 </p>
                 <p>
-                    <i class="fa fa-calendar text-red"></i>
+                    <i class="fa fa-calendar text-main"></i>
                     <span class="phone"><?php echo $post['date']; ?></span>
                 </p>
             </div>

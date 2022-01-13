@@ -19,13 +19,14 @@ $get_all_posts = mysqli_query($connection, 'SELECT * FROM posts ORDER BY row DES
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>آگهی ها</title>
     <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
-    <link href="<?php echo $home; ?>/resources/css/style.css" type="text/css" rel="stylesheet">
+    <link href="<?php echo $home; ?>/resources/sass/main.css" type="text/css" rel="stylesheet">
+<!--    <link href="--><?php //echo $home; ?><!--/resources/css/style.css" type="text/css" rel="stylesheet">-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet">
 </head>
 <body class="body">
 <nav class="navbar navbar-expand-lg navbar-light bg-blur fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand text-red" href="<?php echo $home; ?>">دکوراسیون ایران زمین</a>
+        <a class="navbar-brand text-main" href="<?php echo $home; ?>">دکوراسیون ایران زمین</a>
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
@@ -61,12 +62,12 @@ $get_all_posts = mysqli_query($connection, 'SELECT * FROM posts ORDER BY row DES
     </div>
 </nav>
 <div class="main">
-    <h1 class="text-red">آگهی ها</h1>
+    <h1 class="text-main">آگهی ها</h1>
     <br>
     <p>
         آگهی هایی که مردم که نیاز به یک طراح، دیزایتر و حتی نضاب دارند در این قسمت قابل مشاهده دارند. اگه ورود به آگهی و نمایش کامل آگهی باید وارد حساب خود شوید.
     </p>
-    <hr class="text-red">
+    <hr class="text-main">
     <div class="row">
         <?php
         if (mysqli_num_rows($get_all_posts) != 0) {
@@ -75,17 +76,17 @@ $get_all_posts = mysqli_query($connection, 'SELECT * FROM posts ORDER BY row DES
                 <div class="col-md-3">
                     <div class="post border-red m-1 pointer" onclick="changeUrl('post.php?post=<?php echo $post['id']; ?>');">
                         <div class="post-head">
-                            <p class="text-red"><?php echo $post['name']; ?></p>
+                            <p class="text-main"><?php echo $post['name']; ?></p>
                         </div>
                         <div class="post-content">
                             <p><?php echo $post['caption']; ?></p>
                         </div>
-                        <hr class="text-red">
-                        <span class="post-more pointer text-red">اطلاعات بیشتر</span>
+                        <hr class="text-main">
+                        <span class="post-more pointer text-main">اطلاعات بیشتر</span>
                         <div class="post-footer">
                             <br>
-                            <p><i class="text-red fa fa-map-marker"></i> <?php echo $post['city']; ?></p>
-                            <p><i class="text-red fa fa-calendar"></i> <?php echo $post['date']; ?></p>
+                            <p><i class="text-main fa fa-map-marker"></i> <?php echo $post['city']; ?></p>
+                            <p><i class="text-main fa fa-calendar"></i> <?php echo $post['date']; ?></p>
                         </div>
                     </div>
                 </div>

@@ -1,3 +1,5 @@
+tabs = ['.overview', '.ads', '.requests', '.settings'];
+
 $(".close-box").click(function () {
     $(".welcome").hide(500);
 });
@@ -14,6 +16,58 @@ $('.faq-question').click(function () {
 });
 $('.post-more').click(function () {
     $(this).next('.post-footer').slideToggle();
+});
+
+$('#ads-link').click(function () {
+    if ($('.ads').hasClass('none')) {
+        for (const tabsKey in tabs) {
+            if ($(tabs[tabsKey]).hasClass('block')) {
+                $(tabs[tabsKey]).removeClass('block');
+                $(tabs[tabsKey]).addClass('none');
+            }
+        }
+        $('.ads').removeClass('none');
+        $('.ads').addClass('block');
+    }
+});
+
+$('#requests-link').click(function () {
+    if ($('.requests').hasClass('none')) {
+        for (const tabsKey in tabs) {
+            if ($(tabs[tabsKey]).hasClass('block')) {
+                $(tabs[tabsKey]).removeClass('block');
+                $(tabs[tabsKey]).addClass('none');
+            }
+        }
+        $('.requests').removeClass('none');
+        $('.requests').addClass('block');
+    }
+});
+
+$('#settings-link').click(function () {
+    if ($('.settings').hasClass('none')) {
+        for (const tabsKey in tabs) {
+            if ($(tabs[tabsKey]).hasClass('block')) {
+                $(tabs[tabsKey]).removeClass('block');
+                $(tabs[tabsKey]).addClass('none');
+            }
+        }
+        $('.settings').removeClass('none');
+        $('.settings').addClass('block');
+    }
+});
+
+$('#overview-link').click(function () {
+    if ($('.overview').hasClass('none')) {
+        for (const tabsKey in tabs) {
+            if ($(tabs[tabsKey]).hasClass('block')) {
+                $(tabs[tabsKey]).removeClass('block');
+                $(tabs[tabsKey]).addClass('none');
+            }
+        }
+        $('.overview').removeClass('none');
+        $('.overview').addClass('block');
+    }
 });
 
 function changeBox(show, hide) {

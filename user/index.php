@@ -132,17 +132,33 @@ if (!$session_status) {
 
 <!-- Modal -->
 <div class="modal fade" id="addNewPost" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">اضافه کردن آگهی جدید</h5>
+    <div class="modal-dialog modal-dialog-scrollable">
+        <form action="index.php" method="post" autocomplete="off">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">اضافه کردن آگهی جدید</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="m-1">
+                        <label for="adname" class="form-label text-red">نام آگهی *</label>
+                        <input id="adname" name="adname" type="text" class="form-control border-red"
+                               placeholder="نام آگهی" required>
+                    </div>
+                    <div class="m-1">
+                        <label for="caption" class="form-label text-red">توضیحات آگهی *</label>
+                        <textarea name="caption" rows="5" id="caption" class="form-control border-red"
+                                  placeholder="توضیحات آگهی" required></textarea>
+                    </div>
+                    <div class="m-1">
+                        <label for="city" class="form-label text-red">شهر *</label>
+                        <input id="city" name="adname" type="text" class="form-control border-red"
+                               placeholder="شهر" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button name="addnewad" class="wbtn btn-red" type="submit">ثبت آگهی</button>
+                </div>
             </div>
-            <div class="modal-body">
-                <p>چیز میزای اضافه کردن</p>
-            </div>
-            <div class="modal-footer">
-                <button class="ibtn btn-red" type="submit" name="addnewad">ثبت آگهی</button>
-            </div>
-        </div>
+        </form>
     </div>
 </div>

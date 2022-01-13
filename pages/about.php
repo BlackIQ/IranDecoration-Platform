@@ -51,7 +51,8 @@ $session_status = $_SESSION['status'];
                 if (!$session_status) {
                     echo '<a href="../client" class="nav-link">ورود به حساب</a>';
                 } else {
-                    echo '<a href="../client/logout.php" class="nav-link">خارج شدن از حساب</a>';                }
+                    echo '<a href="../client" class="nav-link">ورود به پنل</a>';
+                }
                 ?>
             </div>
         </div>

@@ -90,6 +90,7 @@ if ($session_status == true) {
                         </div>
                         <br>
                         <button name="login" class="wbtn btn-main" type="submit">ورود</button>
+                    </form>
                 </div>
             </div>
             <br>

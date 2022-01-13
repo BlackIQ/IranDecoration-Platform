@@ -22,7 +22,7 @@ if ($session_status == true) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ورود به پنل کاربری</title>
     <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
-    <link href="../resources/css/main.css" type="text/css" rel="stylesheet">
+    <link href="../resources/css/style.css" type="text/css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet">
 </head>
 <body class="body">

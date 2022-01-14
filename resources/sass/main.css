@@ -143,6 +143,7 @@
 
 .bg-blur {
   backdrop-filter: blur(10px);
+  height: auto;
 }
 
 .user-nav-link {

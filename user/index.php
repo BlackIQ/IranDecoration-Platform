@@ -50,9 +50,6 @@ $user_id = $_USER['id'];
                     <span id="ads-link" class="nav-link user-nav-link">آگهی ها</span>
                 </li>
                 <li class="nav-item">
-                    <span id="settings-link" class="nav-link user-nav-link">تنظیمات</span>
-                </li>
-                <li class="nav-item">
                     <span id="add-ad-link" data-mdb-toggle="modal" data-mdb-target="#addNewPost"
                           class="nav-link user-nav-link">اگهی جدید</span>
                 </li>
@@ -162,22 +159,6 @@ $user_id = $_USER['id'];
             </div>
         </div>
     </div>
-    <div class="settings none">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="m-1 ibox border-main">
-                    <h4 class="text-main">تنظیمات ظاهر</h4>
-                    <hr class="text-main">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="m-1 ibox border-main">
-                    <h4 class="text-main">تنظیمات کاربر</h4>
-                    <hr class="text-main">
-                </div>
-            </div>
-        </div>
-    </div>
     <?php
     if (count($errors) > 0) {
         ?>
@@ -199,6 +180,7 @@ $user_id = $_USER['id'];
     }
     ?>
 </div>
+<div><?php include('../resources/widgets/footer.php'); ?></div>
 <script src="<?php echo $home; ?>/resources/js/jquery-3.6.0.min.js"></script>
 <script src="<?php echo $home; ?>/resources/js/script.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.js"></script>

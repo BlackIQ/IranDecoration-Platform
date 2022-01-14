@@ -3,6 +3,7 @@
 session_start();
 
 include('../resources/config/config.php');
+include('../resources/routes/route.php');
 
 $session_status = $_SESSION['status'];
 
@@ -79,11 +80,8 @@ else {
                 <h3 class="text-main"><?php echo $post['name']; ?></h3>
                 <br>
                 <p><?php echo $post['caption']; ?></p>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="m-1 ibox border-right">
-                <h4 class="text-main">تماس و اطلاعات بیشتر</h4>
+                <br>
+                <h6 class="text-main">اطلاعات تماس</h6>
                 <br>
                 <p>
                     <i class="fa fa-mobile text-main"></i>
@@ -102,6 +100,20 @@ else {
                     <i class="fa fa-calendar text-main"></i>
                     <span class="phone"><?php echo $post['date']; ?></span>
                 </p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="m-1 ibox border-right">
+                <h4 class="text-main">ارسال درخواست</h4>
+                <br>
+                <form method="post" action="post.php" autocomplete="off">
+                    <label class="form-label text-main" for="message">متن پیام خود را بنویسید</label>
+                    <textarea name="message" id="message" class="form-control border-main" rows="5" placeholder="متن پیام" required></textarea>
+                    <br>
+                    <p class="text-main">* ابتدا متن ارسالی یا یک بار بازخوانی کنید و بعد روی دکمه زیر کلیک نمایید.</p>
+                    <br>
+                    <button class="wbtn btn-main" name="sendapply" type="submit" value="<?php echo $_post; ?>">ارسال درخواست</button>
+                </form>
             </div>
         </div>
     </div>

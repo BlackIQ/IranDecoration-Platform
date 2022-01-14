@@ -86,11 +86,33 @@ $user_id = $_USER['id'];
                 <div class="m-1 ibox border-main">
                     <h4 class="text-main">لیست درخواست ها</h4>
                     <hr class="text-main">
+                    <div>
+                        <?php
+                        $get_applies = mysqli_query($connection, "SELECT * FROM applies WHERE user = '$user_id'");
+                        if (mysqli_num_rows($get_applies) != 0) {
+                            while ($apply = mysqli_fetch_assoc($get_applies)) {
+                                $post_id = $apply['post'];
+                                $post = mysqli_fetch_assoc(mysqli_query($connection, "SELECT * FROM posts WHERE id = '$post_id'"));
+                                ?>
+                                <p onclick="changeUrl('?postid=<?php echo $apply['apply_id']; ?>');" class="pointer">
+                                    <span class="font-weight-bold"><?php echo $post['name']; ?></span>
+                                    <span class="float-start">
+                                        <?php echo $apply['date']; ?>
+                                    </span>
+                                </p>
+                                <?php
+                            }
+                        }
+                        else {
+                            echo '<h5>شما تا کنون آگهی ثبت نکرده اید.</h5>';
+                        }
+                        ?>
+                    </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="m-1 ibox border-main">
-                    <h4 class="text-main">نمایش درخواست به خصوص</h4>
+                    <h4 class="text-main">نمایش اطلاعات درخواست</h4>
                     <hr class="text-main">
                 </div>
             </div>
@@ -98,7 +120,7 @@ $user_id = $_USER['id'];
     </div>
     <div class="ads none">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="m-1 ibox border-main">
                     <h4 class="text-main">لیست آگهی ها</h4>
                     <hr class="text-main">
@@ -124,10 +146,18 @@ $user_id = $_USER['id'];
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="m-1 ibox border-main">
-                    <h4 class="text-main">نمایش آگهی به خصوص</h4>
+                    <h4 class="text-main">لیست درخواست ها</h4>
                     <hr class="text-main">
+                    <h5>یک آگهی را انتخاب کنید.</h5>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="m-1 ibox border-main">
+                    <h4 class="text-main">اطلاعات درخواست</h4>
+                    <hr class="text-main">
+                    <h5>یک درخواست را انتخاب کنید.</h5>
                 </div>
             </div>
         </div>

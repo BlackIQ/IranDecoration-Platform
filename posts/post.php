@@ -106,14 +106,24 @@ else {
             <div class="m-1 ibox border-right">
                 <h4 class="text-main">ارسال درخواست</h4>
                 <br>
-                <form method="post" action="post.php" autocomplete="off">
-                    <label class="form-label text-main" for="message">متن پیام خود را بنویسید</label>
-                    <textarea name="message" id="message" class="form-control border-main" rows="5" placeholder="متن پیام" required></textarea>
-                    <br>
-                    <p class="text-main">* ابتدا متن ارسالی یا یک بار بازخوانی کنید و بعد روی دکمه زیر کلیک نمایید.</p>
-                    <br>
-                    <button class="wbtn btn-main" name="sendapply" type="submit" value="<?php echo $_post; ?>">ارسال درخواست</button>
-                </form>
+                <?php
+                $user = $_USER['id'];
+                if (mysqli_num_rows(mysqli_query($connection, "SELECT * FROM applies WHERE user = '$user' AND post = '$_post'")) != 1) {
+                    ?>
+                    <form method="post" action="post.php" autocomplete="off">
+                        <label class="form-label text-main" for="message">متن پیام خود را بنویسید</label>
+                        <textarea name="message" id="message" class="form-control border-main" rows="5" placeholder="متن پیام" required></textarea>
+                        <br>
+                        <p class="text-main">* ابتدا متن ارسالی یا یک بار بازخوانی کنید و بعد روی دکمه زیر کلیک نمایید.</p>
+                        <br>
+                        <button class="wbtn btn-main" name="sendapply" type="submit" value="<?php echo $_post; ?>">ارسال درخواست</button>
+                    </form>
+                    <?php
+                }
+                else {
+                    echo "<h5>درخواست شما برای این آگهی ارسال شده است.</h5>";
+                }
+                ?>
             </div>
         </div>
     </div>

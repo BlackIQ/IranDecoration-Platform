@@ -37,6 +37,16 @@ CREATE TABLE IF NOT EXISTS `posts`
     PRIMARY KEY (`row`)
 );
 
+CREATE TABLE IF NOT EXISTS `applies`
+(
+    `row`      INT(11) AUTO_INCREMENT,
+    `apply_id` text,
+    `user`     text,
+    `date`     text,
+    `message`  text,
+    PRIMARY KEY (`row`)
+);
+
 SELECT *
 FROM users;
 
@@ -45,3 +55,6 @@ FROM messages;
 
 SELECT *
 FROM posts;
+
+SELECT *
+FROM applies;

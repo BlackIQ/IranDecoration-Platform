@@ -40,10 +40,12 @@ CREATE TABLE IF NOT EXISTS `posts`
 CREATE TABLE IF NOT EXISTS `applies`
 (
     `row`      INT(11) AUTO_INCREMENT,
+    `post`     text,
     `apply_id` text,
     `user`     text,
     `date`     text,
     `message`  text,
+    `status`   text,
     PRIMARY KEY (`row`)
 );
 

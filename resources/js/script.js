@@ -1,5 +1,5 @@
-tabs = ['.overview', '.ads', '.requests', '.settings'];
-navs = ['#overview-link', '#ads-link', '#requests-link', '#settings-link'];
+tabs = ['.overview', '.ads', '.requests',];
+navs = ['#overview-link', '#ads-link', '#requests-link',];
 
 $(".close-box").click(function () {
     $(".welcome").hide(500);
@@ -60,27 +60,6 @@ $('#requests-link').click(function () {
         $(this).addClass('active');
         $('.requests').removeClass('none');
         $('.requests').addClass('block');
-    }
-});
-
-$('#settings-link').click(function () {
-    if ($('.settings').hasClass('none')) {
-        for (const tabsKey in tabs) {
-            if ($(tabs[tabsKey]).hasClass('block')) {
-                $(tabs[tabsKey]).removeClass('block');
-                $(tabs[tabsKey]).addClass('none');
-            }
-        }
-        for (const navKey in navs) {
-            if ($(navs[navKey]).hasClass('active')) {
-                $(navs[navKey]).removeClass('active');
-                $(navs[navKey]).removeClass('text-main');
-            }
-        }
-        $(this).addClass('text-main');
-        $(this).addClass('active');
-        $('.settings').removeClass('none');
-        $('.settings').addClass('block');
     }
 });
 

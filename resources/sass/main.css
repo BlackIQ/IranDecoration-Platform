@@ -96,8 +96,24 @@
   opacity: 0.8;
 }
 
+.index-header {
+  text-align: center;
+  padding: 5%;
+}
+
 .artpic {
   height: 100vh;
+}
+
+.index-image {
+  height: 100%;
+  width: 100%;
+  transition: transform 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 10px 36px 0, rgba(0, 0, 0, 0.06) 0 0 0 1px;
+}
+
+.index-image:hover {
+  transform: scale(1.05);
 }
 
 .welcome {

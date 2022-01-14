@@ -165,3 +165,29 @@ if (isset($_POST['addnewad'])) {
         }
     }
 }
+
+// Send apply
+if (isset($_POST['sendapply'])) {
+    $post = mysqli_real_escape_string($connection, $_POST['sendapply']);
+    $message = mysqli_real_escape_string($connection, $_POST['message']);
+
+    if (empty($message)) {
+        array_push($errors, 'متن درخواست الزامیست');
+    }
+
+    if (count($errors) == 0) {
+        $id = rand(11111111, 99999999);
+        $date = date("M d, Y H:i:s");
+        $user = $_USER['id'];
+        $query = mysqli_query($connection, "INSERT INTO applies (post, apply_id, user, date, message, status) VALUES ('$post', '$id', '$user', '$date', '$message', 'not')");
+        if ($query) {
+            ?>
+            <script>showAlert('درخواست با موفقیت ثبت شد.');</script>
+            <?php
+            header('Location: ' . $home . '/posts/post.php?post=' . $post);
+        }
+        else {
+            array_push($errors, mysqli_error($connection));
+        }
+    }
+}

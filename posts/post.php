@@ -7,19 +7,6 @@ include('../resources/routes/route.php');
 
 $session_status = $_SESSION['status'];
 
-$_post = $_GET['post'];
-
-$get_post = mysqli_query($connection, "SELECT * FROM posts WHERE id = '$_post'");
-
-if (mysqli_num_rows($get_post) == 1) {
-    $post = mysqli_fetch_assoc($get_post);
-    $user_from_ad = $post['user'];
-    $user = mysqli_fetch_assoc(mysqli_query($connection, "SELECT * FROM users WHERE id = '$user_from_ad'"));
-}
-else {
-    echo 'پست پیدا نشد.';
-}
-
 ?>
 
 <!doctype html>
@@ -84,59 +71,72 @@ else {
     </div>
 </nav>
 <div class="main">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="m-1 ibox border-right">
-                <h3 class="text-main"><?php echo $post['name']; ?></h3>
-                <br>
-                <p><?php echo $post['caption']; ?></p>
-                <br>
-                <h6 class="text-main">اطلاعات تماس</h6>
-                <br>
-                <p>
-                    <i class="fa fa-mobile text-main"></i>
-                    <span class="phone"><?php echo $user['phone']; ?></span>
-                </p>
-                <p>
-                    <i class="fa fa-envelope text-main"></i>
-                    <span class="phone"><?php echo $user['mail']; ?></span>
-                </p>
-                <br>
-                <p>
-                    <i class="fa fa-map-marker text-main"></i>
-                    <span class="phone"><?php echo $post['city']; ?></span>
-                </p>
-                <p>
-                    <i class="fa fa-calendar text-main"></i>
-                    <span class="phone"><?php echo $post['date']; ?></span>
-                </p>
+    <?php
+    $_post = $_GET['post'];
+    $get_post = mysqli_query($connection, "SELECT * FROM posts WHERE id = '$_post'");
+    if (mysqli_num_rows($get_post) == 1) {
+        $post = mysqli_fetch_assoc($get_post);
+        $user_from_ad = $post['user'];
+        $user = mysqli_fetch_assoc(mysqli_query($connection, "SELECT * FROM users WHERE id = '$user_from_ad'"));
+        ?>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="m-1 ibox border-right">
+                    <h3 class="text-main"><?php echo $post['name']; ?></h3>
+                    <br>
+                    <p><?php echo $post['caption']; ?></p>
+                    <br>
+                    <h6 class="text-main">اطلاعات تماس</h6>
+                    <br>
+                    <p>
+                        <i class="fa fa-mobile text-main"></i>
+                        <span class="phone"><?php echo $user['phone']; ?></span>
+                    </p>
+                    <p>
+                        <i class="fa fa-envelope text-main"></i>
+                        <span class="phone"><?php echo $user['mail']; ?></span>
+                    </p>
+                    <br>
+                    <p>
+                        <i class="fa fa-map-marker text-main"></i>
+                        <span class="phone"><?php echo $post['city']; ?></span>
+                    </p>
+                    <p>
+                        <i class="fa fa-calendar text-main"></i>
+                        <span class="phone"><?php echo $post['date']; ?></span>
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-6">
-            <div class="m-1 ibox border-right">
-                <h4 class="text-main">ارسال درخواست</h4>
-                <br>
-                <?php
-                $user = $_USER['id'];
-                if (mysqli_num_rows(mysqli_query($connection, "SELECT * FROM applies WHERE user = '$user' AND post = '$_post'")) != 1) {
-                    ?>
-                    <form method="post" action="post.php" autocomplete="off">
-                        <label class="form-label text-main" for="message">متن پیام خود را بنویسید</label>
-                        <textarea name="message" id="message" class="form-control border-main" rows="5" placeholder="متن پیام" required></textarea>
-                        <br>
-                        <p class="text-main">* ابتدا متن ارسالی یا یک بار بازخوانی کنید و بعد روی دکمه زیر کلیک نمایید.</p>
-                        <br>
-                        <button class="wbtn btn-main" name="sendapply" type="submit" value="<?php echo $_post; ?>">ارسال درخواست</button>
-                    </form>
+            <div class="col-md-6">
+                <div class="m-1 ibox border-right">
+                    <h4 class="text-main">ارسال درخواست</h4>
+                    <br>
                     <?php
-                }
-                else {
-                    echo "<h5>درخواست شما برای این آگهی ارسال شده است.</h5>";
-                }
-                ?>
+                    $user = $_USER['id'];
+                    if (mysqli_num_rows(mysqli_query($connection, "SELECT * FROM applies WHERE user = '$user' AND post = '$_post'")) != 1) {
+                        ?>
+                        <form method="post" action="post.php" autocomplete="off">
+                            <label class="form-label text-main" for="message">متن پیام خود را بنویسید</label>
+                            <textarea name="message" id="message" class="form-control border-main" rows="5" placeholder="متن پیام" required></textarea>
+                            <br>
+                            <p class="text-main">* ابتدا متن ارسالی یا یک بار بازخوانی کنید و بعد روی دکمه زیر کلیک نمایید.</p>
+                            <br>
+                            <button class="wbtn btn-main" name="sendapply" type="submit" value="<?php echo $_post; ?>">ارسال درخواست</button>
+                        </form>
+                        <?php
+                    }
+                    else {
+                        echo "<h5 class='null'>درخواست شما برای این آگهی ارسال شده است.</h5>";
+                    }
+                    ?>
+                </div>
             </div>
         </div>
-    </div>
+        <?php
+    } else {
+        echo '<h5 class="null text-center" style="padding-top: 10%;">آگهی مورد نظر پیدا نشد یا اختلالی رخ داده است.</h5>';
+    }
+    ?>
 </div>
 <?php include('../resources/widgets/footer.php'); ?>
 <script src="<?php echo $home; ?>/resources/js/jquery-3.6.0.min.js"></script>

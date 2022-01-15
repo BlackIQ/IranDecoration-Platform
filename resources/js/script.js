@@ -98,14 +98,14 @@ $('#ads-link').click(function () {
             if ($(navs[navKey]).hasClass('active')) {
                 $(navs[navKey]).removeClass('active');
                 $(navs[navKey]).removeClass('text-main');
+                $(navs[navKey]).addClass('deactive');
             }
         }
         $(this).addClass('text-main');
         $(this).addClass('active');
+        $(this).removeClass('deactive');
         $('.ads').removeClass('none');
         $('.ads').addClass('block');
-        $(this).addClass('text-main');
-        $(this).addClass('active');
     }
 });
 
@@ -121,10 +121,12 @@ $('#requests-link').click(function () {
             if ($(navs[navKey]).hasClass('active')) {
                 $(navs[navKey]).removeClass('active');
                 $(navs[navKey]).removeClass('text-main');
+                $(navs[navKey]).addClass('deactive');
             }
         }
         $(this).addClass('text-main');
         $(this).addClass('active');
+        $(this).removeClass('deactive');
         $('.requests').removeClass('none');
         $('.requests').addClass('block');
     }
@@ -142,10 +144,12 @@ $('#overview-link').click(function () {
             if ($(navs[navKey]).hasClass('active')) {
                 $(navs[navKey]).removeClass('active');
                 $(navs[navKey]).removeClass('text-main');
+                $(navs[navKey]).addClass('deactive');
             }
         }
         $(this).addClass('text-main');
         $(this).addClass('active');
+        $(this).removeClass('deactive');
         $('.overview').removeClass('none');
         $('.overview').addClass('block');
     }

@@ -84,6 +84,10 @@
   padding: 1%;
 }
 
+.count-requests {
+  color: darkred;
+}
+
 .btn-main {
   color: white;
   background: darkred;

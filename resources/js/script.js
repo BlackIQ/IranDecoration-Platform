@@ -40,9 +40,11 @@ if (get('theme') === 'light') {
 
 if ($('.body').hasClass('light')) {
     $('.theme-changer').addClass('fa-moon');
+    $('.theme-changer').css({'color':'black'});
 }
 else {
     $('.theme-changer').addClass('fa-sun');
+    $('.theme-changer').css({'color':'white'});
 }
 
 $('.theme-changer').click(function () {
@@ -51,6 +53,7 @@ $('.theme-changer').click(function () {
         $('.body').addClass('dark');
         $('.theme-changer').removeClass('fa-moon');
         $('.theme-changer').addClass('fa-sun');
+        $('.theme-changer').css({'color':'white'});
         set('theme', 'dark');
     }
     else {
@@ -58,6 +61,7 @@ $('.theme-changer').click(function () {
         $('.body').addClass('light');
         $('.theme-changer').removeClass('fa-sun');
         $('.theme-changer').addClass('fa-moon');
+        $('.theme-changer').css({'color':'black'});
         set('theme', 'light');
 
     }

@@ -25,7 +25,7 @@ $session_status = $_SESSION['status'];
 <nav class="navbar navbar-expand-lg navbar-light bg-blur fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand text-main" href="<?php echo $home; ?>">دکوراسیون ایران زمین</a>
-        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarText"
+        <button class="navbar-toggler text-main" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </button>

@@ -52,9 +52,9 @@ $session_status = $_SESSION['status'];
                     <li class="nav-item">
                         <?php
                         if (!$session_status) {
-                            echo '<a href="client" class="nav-link auth-link">ورود به حساب</a>';
+                            ?><a href="<?php echo $home; ?>/client" class="nav-link auth-link">ورود به حساب</a><?php
                         } else {
-                            echo '<a href="client" class="nav-link auth-link">ورود به پنل</a>';
+                            ?><a href="<?php echo $home; ?>/client" class="nav-link auth-link">ورود به پنل</a><?php
                         }
                         ?>
                     </li>

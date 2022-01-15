@@ -56,6 +56,18 @@
 .light .auth-link {
   color: darkred !important;
 }
+.light .null {
+  color: gray;
+}
+.light .bg-modal {
+  background: #f1f1f1;
+}
+.light .bg-modal .title-modal {
+  color: darkred;
+}
+.light .index-header h3 {
+  color: #555;
+}
 
 .dark {
   background: #1f1b24;
@@ -110,6 +122,18 @@
 }
 .dark .auth-link {
   color: #ff0030 !important;
+}
+.dark .null {
+  color: gray;
+}
+.dark .bg-modal {
+  background: #1f1b24;
+}
+.dark .bg-modal .title-modal {
+  color: white;
+}
+.dark .index-header h3 {
+  color: white;
 }
 
 .body {
@@ -192,29 +216,10 @@
   transform: scale(1.05);
 }
 
-.welcome {
-  position: relative;
-  padding: 5%;
-  border: solid 1px darkred;
-}
-
-.welcome p {
-  font-size: 80%;
-}
-
-.welcome .close-box {
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  position: absolute;
-  padding: 5%;
-}
-
 .auth-error {
   position: relative;
   padding: 5%;
 }
-
 .auth-error .close-box {
   cursor: pointer;
   top: 0;

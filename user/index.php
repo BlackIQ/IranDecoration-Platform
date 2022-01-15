@@ -40,22 +40,32 @@ $user_id = $_USER['id'];
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav">
-                <li class="nav-item">
+                <li class="nav-item deactive">
                     <span id="overview-link" class="nav-link user-nav-link active text-main">نگاه کلی</span>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item deactive">
                     <span id="requests-link" class="nav-link user-nav-link">درخواست ها</span>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item deactive">
                     <span id="ads-link" class="nav-link user-nav-link">آگهی ها</span>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item deactive">
                     <span id="add-ad-link" data-mdb-toggle="modal" data-mdb-target="#addNewPost"
                           class="nav-link user-nav-link">اگهی جدید</span>
                 </li>
             </ul>
             <div class="me-auto">
-                <a href="../client/logout.php" class="nav-link">خروج از حساب</a>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="?logout=true" class="nav-link auth-link">خروج از حساب</a>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link"></span>
+                    </li>
+                    <li class="nav-item">
+                        <h4><i class="nav-link theme-changer pointer fa"></i></h4>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

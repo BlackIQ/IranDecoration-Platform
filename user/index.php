@@ -40,18 +40,18 @@ $user_id = $_USER['id'];
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav">
-                <li class="nav-item deactive">
+                <li class="nav-item">
                     <span id="overview-link" class="nav-link user-nav-link active text-main">نگاه کلی</span>
                 </li>
-                <li class="nav-item deactive">
-                    <span id="requests-link" class="nav-link user-nav-link">درخواست ها</span>
+                <li class="nav-item">
+                    <span id="requests-link" class="nav-link deactive user-nav-link">درخواست ها</span>
                 </li>
-                <li class="nav-item deactive">
-                    <span id="ads-link" class="nav-link user-nav-link">آگهی ها</span>
+                <li class="nav-item">
+                    <span id="ads-link" class="nav-link deactive user-nav-link">آگهی ها</span>
                 </li>
-                <li class="nav-item deactive">
+                <li class="nav-item">
                     <span id="add-ad-link" data-mdb-toggle="modal" data-mdb-target="#addNewPost"
-                          class="nav-link user-nav-link">اگهی جدید</span>
+                          class="nav-link deactive user-nav-link">اگهی جدید</span>
                 </li>
             </ul>
             <div class="me-auto">
@@ -111,7 +111,7 @@ $user_id = $_USER['id'];
                             }
                         }
                         else {
-                            echo '<h5>شما تا کنون آگهی ثبت نکرده اید.</h5>';
+                            echo '<h5 class="null">شما تا کنون آگهی ثبت نکرده اید.</h5>';
                         }
                         ?>
                     </div>
@@ -151,7 +151,7 @@ $user_id = $_USER['id'];
                             }
                         }
                         else {
-                            echo '<h5>شما تا کنون آگهی ثبت نکرده اید.</h5>';
+                            echo '<h5 class="null">شما تا کنون آگهی ثبت نکرده اید.</h5>';
                         }
                         ?>
                     </div>
@@ -161,14 +161,14 @@ $user_id = $_USER['id'];
                 <div class="m-1 ibox border-main">
                     <h4 class="text-main">لیست درخواست ها</h4>
                     <hr class="text-main">
-                    <h5>یک آگهی را انتخاب کنید.</h5>
+                    <h5 class="null">یک آگهی را انتخاب کنید.</h5>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="m-1 ibox border-main">
                     <h4 class="text-main">اطلاعات درخواست</h4>
                     <hr class="text-main">
-                    <h5>یک درخواست را انتخاب کنید.</h5>
+                    <h5 class="null">یک درخواست را انتخاب کنید.</h5>
                 </div>
             </div>
         </div>
@@ -205,9 +205,9 @@ $user_id = $_USER['id'];
 <div class="modal fade" id="addNewPost" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
         <form action="index.php" method="post" autocomplete="off">
-            <div class="modal-content">
+            <div class="modal-content bg-modal">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">اضافه کردن آگهی جدید</h5>
+                    <h5 class="modal-title title-modal" id="exampleModalLabel">اضافه کردن آگهی جدید</h5>
                 </div>
                 <div class="modal-body">
                     <div class="m-1">

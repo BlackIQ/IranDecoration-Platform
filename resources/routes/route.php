@@ -12,6 +12,15 @@ if ($session_status) {
 
 $errors = array();
 
+// Logout user
+if (isset($_GET['logout'])) {
+    if ($_GET['logout']) {
+        session_destroy();
+        header('location: ' . $home);
+        die();
+    }
+}
+
 // Login user
 if (isset($_POST['login'])) {
     $email = mysqli_real_escape_string($connection, $_POST['mail']);

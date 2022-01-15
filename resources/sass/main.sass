@@ -1,14 +1,124 @@
-$primaryColor: darkred
+$lightColor: darkred
+$darkColor: #ff0030
 
 @font-face
   font-family: 'iransans'
   src: url("../fonts/iransans.ttf")
 
+.light
+  background: #f1f1f1
 
+  p
+    color: black
+
+  .text-main
+    color: $lightColor !important
+
+  .svgbg
+    fill: $lightColor
+
+  .active
+    color: $lightColor !important
+
+  .text-main
+    color: $lightColor !important
+
+  .a-main
+    cursor: pointer
+    color: $lightColor !important
+
+  .a-main
+    &:hover
+      color: $lightColor !important
+
+  .border-main
+    border: solid 1px $lightColor !important
+
+  .border-right
+    border-right: solid 1px $lightColor
+
+  .border-left
+    border-left: solid 1px $lightColor
+
+  .bg-main
+    color: white
+    padding: 0 2% 2%
+    background: $lightColor
+
+  .count-requests
+    color: $lightColor
+
+  .btn-main
+    color: white
+    background: $lightColor
+    border: solid 1px $lightColor
+    border-radius: 5px
+
+  .deactive
+    color: gray !important
+
+  .auth-link
+    color: $lightColor !important
+
+.dark
+  background: #1f1b24
+
+  p
+    color: white
+
+  .text-main
+    color: $darkColor !important
+
+  .svgbg
+    fill: $darkColor
+
+  .active
+    color: $darkColor !important
+
+  .text-main
+    color: $darkColor !important
+
+  .a-main
+    cursor: pointer
+    color: $darkColor !important
+
+  .a-main
+    &:hover
+      color: $darkColor !important
+
+  .border-main
+    border: solid 1px $darkColor !important
+
+  .border-right
+    border-right: solid 1px $darkColor
+
+  .border-left
+    border-left: solid 1px $darkColor
+
+  .bg-main
+    color: white
+    padding: 0 2% 2%
+    background: $darkColor
+
+  .count-requests
+    color: $darkColor
+
+  .btn-main
+    color: white
+    background: $darkColor
+    border: solid 1px $darkColor
+    border-radius: 5px
+
+  .deactive
+    color: gray !important
+
+  .auth-link
+    color: $darkColor !important
+
+// Defaults
 .body
   direction: rtl
   text-align: right
-  background: #f1f1f1
   font-family: 'iransans', serif
 
 .main
@@ -17,52 +127,25 @@ $primaryColor: darkred
 .pointer
   cursor: pointer
 
-.active
-  color: $primaryColor !important
+.bg-blur
+  backdrop-filter: blur(10px)
+  height: auto
+
+.user-nav-link
+  cursor: pointer
 
 .phone
   text-align: left
   direction: ltr
 
-
-.text-main
-  color: $primaryColor !important
-
-
-.a-main
-  cursor: pointer
-  color: $primaryColor !important
-
-
-.a-main
-  &:hover
-    color: red !important
-
-
-.border-main
-  border: solid 1px $primaryColor !important
-
-.border-right
-  border-right: solid 1px $primaryColor
-
-.border-left
-  border-left: solid 1px $primaryColor
-
 .block
   display: block
-
 
 .none
   display: none
 
 .auth-box
   padding: 2%
-
-.bg-main
-  color: white
-  padding: 0 2% 2%
-  background: $primaryColor
-
 
 .ibtn
   width: auto
@@ -75,15 +158,6 @@ $primaryColor: darkred
 .wbtn
   width: 100%
   padding: 1%
-
-.count-requests
-  color: $primaryColor
-
-.btn-main
-  color: white
-  background: $primaryColor
-  border: solid 1px $primaryColor
-  border-radius: 5px
 
 .btn-main
   &:hover
@@ -107,10 +181,11 @@ $primaryColor: darkred
   &:hover
     transform: scale(1.05)
 
+// Welcome
 .welcome
   position: relative
   padding: 5%
-  border: solid 1px $primaryColor
+  border: solid 1px $lightColor
 
 .welcome p
   font-size: 80%
@@ -122,10 +197,10 @@ $primaryColor: darkred
   position: absolute
   padding: 5%
 
+// Auth error
 .auth-error
   position: relative
   padding: 5%
-  border: solid 1px $primaryColor
 
 .auth-error .close-box
   cursor: pointer
@@ -134,6 +209,7 @@ $primaryColor: darkred
   position: absolute
   padding: 5%
 
+// FAQ style
 .faq
   padding: 2%
   border-radius: 5px
@@ -141,13 +217,7 @@ $primaryColor: darkred
 .faq-question
   cursor: pointer
 
-.bg-blur
-  backdrop-filter: blur(10px)
-  height: auto
-
-.user-nav-link
-  cursor: pointer
-
+// Post styles
 .post
   border-radius: 5px
   padding: 5%

@@ -2,10 +2,119 @@
   font-family: "iransans";
   src: url("../fonts/iransans.ttf");
 }
+.light {
+  background: #f1f1f1;
+}
+.light p {
+  color: black;
+}
+.light .text-main {
+  color: darkred !important;
+}
+.light .svgbg {
+  fill: darkred;
+}
+.light .active {
+  color: darkred !important;
+}
+.light .text-main {
+  color: darkred !important;
+}
+.light .a-main {
+  cursor: pointer;
+  color: darkred !important;
+}
+.light .a-main:hover {
+  color: darkred !important;
+}
+.light .border-main {
+  border: solid 1px darkred !important;
+}
+.light .border-right {
+  border-right: solid 1px darkred;
+}
+.light .border-left {
+  border-left: solid 1px darkred;
+}
+.light .bg-main {
+  color: white;
+  padding: 0 2% 2%;
+  background: darkred;
+}
+.light .count-requests {
+  color: darkred;
+}
+.light .btn-main {
+  color: white;
+  background: darkred;
+  border: solid 1px darkred;
+  border-radius: 5px;
+}
+.light .deactive {
+  color: gray !important;
+}
+.light .auth-link {
+  color: darkred !important;
+}
+
+.dark {
+  background: #1f1b24;
+}
+.dark p {
+  color: white;
+}
+.dark .text-main {
+  color: #ff0030 !important;
+}
+.dark .svgbg {
+  fill: #ff0030;
+}
+.dark .active {
+  color: #ff0030 !important;
+}
+.dark .text-main {
+  color: #ff0030 !important;
+}
+.dark .a-main {
+  cursor: pointer;
+  color: #ff0030 !important;
+}
+.dark .a-main:hover {
+  color: #ff0030 !important;
+}
+.dark .border-main {
+  border: solid 1px #ff0030 !important;
+}
+.dark .border-right {
+  border-right: solid 1px #ff0030;
+}
+.dark .border-left {
+  border-left: solid 1px #ff0030;
+}
+.dark .bg-main {
+  color: white;
+  padding: 0 2% 2%;
+  background: #ff0030;
+}
+.dark .count-requests {
+  color: #ff0030;
+}
+.dark .btn-main {
+  color: white;
+  background: #ff0030;
+  border: solid 1px #ff0030;
+  border-radius: 5px;
+}
+.dark .deactive {
+  color: gray !important;
+}
+.dark .auth-link {
+  color: #ff0030 !important;
+}
+
 .body {
   direction: rtl;
   text-align: right;
-  background: #f1f1f1;
   font-family: "iransans", serif;
 }
 
@@ -17,38 +126,18 @@
   cursor: pointer;
 }
 
-.active {
-  color: darkred !important;
+.bg-blur {
+  backdrop-filter: blur(10px);
+  height: auto;
+}
+
+.user-nav-link {
+  cursor: pointer;
 }
 
 .phone {
   text-align: left;
   direction: ltr;
-}
-
-.text-main {
-  color: darkred !important;
-}
-
-.a-main {
-  cursor: pointer;
-  color: darkred !important;
-}
-
-.a-main:hover {
-  color: red !important;
-}
-
-.border-main {
-  border: solid 1px darkred !important;
-}
-
-.border-right {
-  border-right: solid 1px darkred;
-}
-
-.border-left {
-  border-left: solid 1px darkred;
 }
 
 .block {
@@ -61,12 +150,6 @@
 
 .auth-box {
   padding: 2%;
-}
-
-.bg-main {
-  color: white;
-  padding: 0 2% 2%;
-  background: darkred;
 }
 
 .ibtn {
@@ -82,17 +165,6 @@
 .wbtn {
   width: 100%;
   padding: 1%;
-}
-
-.count-requests {
-  color: darkred;
-}
-
-.btn-main {
-  color: white;
-  background: darkred;
-  border: solid 1px darkred;
-  border-radius: 5px;
 }
 
 .btn-main:hover {
@@ -141,7 +213,6 @@
 .auth-error {
   position: relative;
   padding: 5%;
-  border: solid 1px darkred;
 }
 
 .auth-error .close-box {
@@ -158,15 +229,6 @@
 }
 
 .faq-question {
-  cursor: pointer;
-}
-
-.bg-blur {
-  backdrop-filter: blur(10px);
-  height: auto;
-}
-
-.user-nav-link {
   cursor: pointer;
 }
 

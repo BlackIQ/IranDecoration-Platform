@@ -126,9 +126,13 @@ $user_id = $_USER['id'];
                         $get_posts = mysqli_query($connection, "SELECT * FROM posts WHERE user = '$user_id'");
                         if (mysqli_num_rows($get_posts) != 0) {
                             while ($post = mysqli_fetch_assoc($get_posts)) {
+                                $post_id = $post['id'];
+                                $count = mysqli_fetch_assoc(mysqli_query($connection, "SELECT COUNT(post) AS `count` FROM applies WHERE post = '$post_id'"));
                                 ?>
                                 <p onclick="changeUrl('?postid=<?php echo $post['id']; ?>');" class="pointer">
                                     <span class="font-weight-bold"><?php echo $post['name']; ?></span>
+                                    -
+                                    <span class="count-requests"><?php echo $count['count']; ?></span>
                                     <span class="float-start">
                                         <?php echo $post['date']; ?>
                                     </span>

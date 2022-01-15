@@ -25,7 +25,7 @@ $session_status = $_SESSION['status'];
 <nav class="navbar navbar-expand-lg navbar-light bg-blur fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand text-main" href="<?php echo $home; ?>">دکوراسیون ایران زمین</a>
-        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarText"
+        <button class="navbar-toggler text-main" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </button>
@@ -35,26 +35,36 @@ $session_status = $_SESSION['status'];
                     <a class="nav-link active" aria-current="page" href="<?php echo $home; ?>">خانه</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo $home; ?>/pages/about.php">درباره ما</a>
+                    <a class="nav-link deactive" href="<?php echo $home; ?>/pages/about.php">درباره ما</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo $home; ?>/pages/faq.php">سوالات متداول</a>
+                    <a class="nav-link deactive" href="<?php echo $home; ?>/pages/faq.php">سوالات متداول</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo $home; ?>/pages/contact.php">ارتباط با ما</a>
+                    <a class="nav-link deactive" href="<?php echo $home; ?>/pages/contact.php">ارتباط با ما</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo $home; ?>/posts">اگهی ها</a>
+                    <a class="nav-link deactive" href="<?php echo $home; ?>/posts">اگهی ها</a>
                 </li>
             </ul>
             <div class="me-auto">
-                <?php
-                if (!$session_status) {
-                    echo '<a href="client" class="nav-link">ورود به حساب</a>';
-                } else {
-                    echo '<a href="client" class="nav-link">ورود به پنل</a>';
-                }
-                ?>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <?php
+                        if (!$session_status) {
+                            echo '<a href="client" class="nav-link auth-link">ورود به حساب</a>';
+                        } else {
+                            echo '<a href="client" class="nav-link auth-link">ورود به پنل</a>';
+                        }
+                        ?>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link"></span>
+                    </li>
+                    <li class="nav-item">
+                        <h4><i class="nav-link theme-changer pointer fa"></i></h4>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

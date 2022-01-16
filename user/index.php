@@ -101,7 +101,7 @@ $user_id = $_USER['id'];
                                 $post_id = $apply['post'];
                                 $post = mysqli_fetch_assoc(mysqli_query($connection, "SELECT * FROM posts WHERE id = '$post_id'"));
                                 ?>
-                                <p onclick="changeUrl('?postid=<?php echo $apply['apply_id']; ?>');" class="pointer">
+                                <p onclick="set('apply', '<?php echo $apply['apply_id']; ?>'); changeUrl('?apply=<?php echo $apply['apply_id']; ?>');" class="pointer">
                                     <span class="font-weight-bold"><?php echo $post['name']; ?></span>
                                     <span class="float-start">
                                         <?php echo $apply['date']; ?>
@@ -121,6 +121,44 @@ $user_id = $_USER['id'];
                 <div class="m-1 ibox border-main">
                     <h4 class="text-main">نمایش اطلاعات درخواست</h4>
                     <hr class="text-main">
+                    <?php
+                    if (isset($_GET['apply'])) {
+                        $apply_id = $_GET['apply'];
+                        $apply = mysqli_fetch_assoc(mysqli_query($connection, "SELECT * FROM applies WHERE apply_id = '$apply_id'"));
+                        $post_id = $apply['post'];
+                        $post = mysqli_fetch_assoc(mysqli_query($connection, "SELECT * FROM posts WHERE id = '$post_id'"));
+                        $user_id = $post['user'];
+                        $user = mysqli_fetch_assoc(mysqli_query($connection, "SELECT * FROM users WHERE id = '$user_id'"));
+                        ?>
+                        <h5 class="text-main"><?php echo $post['name']; ?></h5>
+                        <p><?php echo $post['caption']; ?></p>
+                        <p>
+                            <i class="fa fa-calendar text-main"></i>
+                            <?php echo $post['date']; ?>
+                        </p>
+                        <p>
+                            <i class="fa fa-map-marker text-main"></i>
+                            <?php echo $post['city']; ?>
+                        </p>
+                        <br>
+                        <p class="text-main"><b>اطلاعات آگهی دهنده</b></p>
+                        <p>
+                            <i class="fa fa-user text-main"></i>
+                            <?php echo $user['name']; ?>
+                        </p>
+                        <p>
+                            <i class="fa fa-mobile text-main"></i>
+                            <?php echo $user['phone']; ?>
+                        </p>
+                        <br>
+                        <p class="text-main"><b>متن درخواست شما</b></p>
+                        <p><?php echo $apply['message']; ?></p>
+                        <?php
+                    }
+                    else {
+                        echo '<h5 class="null">ابتدا آگهی را انتخاب نمایید.</h5>';
+                    }
+                    ?>
                 </div>
             </div>
         </div>

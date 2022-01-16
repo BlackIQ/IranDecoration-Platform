@@ -1,5 +1,8 @@
 lStorage = window.localStorage;
 
+tabs = ['.overview', '.ads', '.requests',];
+navs = ['#overview-link', '#ads-link', '#requests-link',];
+
 function changeBox(show, hide) {
     document.getElementById(show).style.display = 'block';
     document.getElementById(hide).style.display = 'none';
@@ -9,6 +12,30 @@ function changeBox(show, hide) {
 function changeUrl(url) {
     window.location.href = url;
     return false;
+}
+
+function changePanel(page, id) {
+    for (const tabsKey in tabs) {
+        if ($(tabs[tabsKey]) !== page) {
+            if ($(tabs[tabsKey]).hasClass('block')) {
+                $(tabs[tabsKey]).removeClass('block');
+                $(tabs[tabsKey]).addClass('none');
+            }
+        }
+    }
+    for (const navKey in navs) {
+        if ($(navs[navKey]) !== id) {
+            if ($(navs[navKey]).hasClass('active')) {
+                $(navs[navKey]).removeClass('active');
+                $(navs[navKey]).removeClass('text-main');
+            }
+        }
+    }
+    $(id).addClass('text-main');
+    $(id).addClass('active');
+    $(id).removeClass('deactive');
+    $(page).addClass('block');
+    $(page).removeClass('none');
 }
 
 function showAlert(text) {
@@ -27,8 +54,9 @@ function del(key) {
     lStorage.removeItem(key);
 }
 
-tabs = ['.overview', '.ads', '.requests',];
-navs = ['#overview-link', '#ads-link', '#requests-link',];
+if (get('apply') !== null) {
+    changePanel('.requests', '#requests-link');
+}
 
 if (get('theme') === 'light') {
     $('.body').addClass('light');
@@ -63,7 +91,6 @@ $('.theme-changer').click(function () {
         $('.theme-changer').addClass('fa-moon');
         $('.theme-changer').css({'color':'black'});
         set('theme', 'light');
-
     }
 });
 

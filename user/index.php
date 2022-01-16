@@ -119,7 +119,16 @@ $user_id = $_USER['id'];
             </div>
             <div class="col-md-6">
                 <div class="m-1 ibox border-main">
-                    <h4 class="text-main">نمایش اطلاعات درخواست</h4>
+                    <h4 class="text-main">
+                        نمایش اطلاعات درخواست
+                        <?php
+                        if (isset($_GET['apply'])) {
+                            ?>
+                            <i class="fa fa-times text-main float-start" onclick="del('apply'); changeUrl('.');"></i>
+                            <?php
+                        }
+                        ?>
+                    </h4>
                     <hr class="text-main">
                     <?php
                     if (isset($_GET['apply'])) {

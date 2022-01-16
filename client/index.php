@@ -57,6 +57,9 @@ if ($session_status == true) {
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="<?php echo $home; ?>/client">ورود یا ثبت نام</a>
                     </li>
+                    <li class="nav-item">
+                        <h4><i class="nav-link theme-changer pointer fa"></i></h4>
+                    </li>
                 </ul>
             </div>
         </div>

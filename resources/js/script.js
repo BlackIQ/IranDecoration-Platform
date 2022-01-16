@@ -28,6 +28,7 @@ function changePanel(page, id) {
             if ($(navs[navKey]).hasClass('active')) {
                 $(navs[navKey]).removeClass('active');
                 $(navs[navKey]).removeClass('text-main');
+                $(navs[navKey]).addClass('deactive');
             }
         }
     }

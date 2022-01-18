@@ -58,6 +58,9 @@ function del(key) {
 if (get('apply') !== null) {
     changePanel('.requests', '#requests-link');
 }
+else if (get('post') !== null) {
+    changePanel('.ads', '#ads-link');
+}
 
 if (get('theme') === 'light') {
     $('.body').addClass('light');

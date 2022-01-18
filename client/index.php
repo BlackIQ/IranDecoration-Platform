@@ -37,19 +37,19 @@ if ($session_status == true) {
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo $home; ?>">خانه</a>
+                    <a class="nav-link deactive" href="<?php echo $home; ?>">خانه</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo $home; ?>/pages/about.php">درباره ما</a>
+                    <a class="nav-link deactive" href="<?php echo $home; ?>/pages/about.php">درباره ما</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo $home; ?>/pages/faq.php">سوالات متداول</a>
+                    <a class="nav-link deactive" href="<?php echo $home; ?>/pages/faq.php">سوالات متداول</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo $home; ?>/pages/contact.php">ارتباط با ما</a>
+                    <a class="nav-link deactive" href="<?php echo $home; ?>/pages/contact.php">ارتباط با ما</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo $home; ?>/posts">اگهی ها</a>
+                    <a class="nav-link deactive" href="<?php echo $home; ?>/posts">اگهی ها</a>
                 </li>
             </ul>
             <div class="me-auto">

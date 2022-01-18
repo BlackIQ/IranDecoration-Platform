@@ -186,7 +186,7 @@ $user_id = $_USER['id'];
                                 $post_id = $post['id'];
                                 $count = mysqli_fetch_assoc(mysqli_query($connection, "SELECT COUNT(post) AS `count` FROM applies WHERE post = '$post_id'"));
                                 ?>
-                                <p onclick="changeUrl('?postid=<?php echo $post['id']; ?>');" class="pointer">
+                                <p onclick="set('post', '<?php echo $post_id; ?>'); changeUrl('?post=<?php echo $post_id; ?>');" class="pointer">
                                     <span class="font-weight-bold"><?php echo $post['name']; ?></span>
                                     -
                                     <span class="count-requests"><?php echo $count['count']; ?></span>
@@ -206,9 +206,33 @@ $user_id = $_USER['id'];
             </div>
             <div class="col-md-4">
                 <div class="m-1 ibox border-main">
-                    <h4 class="text-main">لیست درخواست ها</h4>
+                    <h4 class="text-main">
+                        لیست درخواست ها
+                        <?php
+                        if (isset($_GET['post'])) {
+                            ?>
+                            <i class="fa fa-times text-main float-start" onclick="del('post'); changeUrl('.');"></i>
+                            <?php
+                        }
+                        ?>
+                    </h4>
                     <hr class="text-main">
-                    <h5 class="null">یک آگهی را انتخاب کنید.</h5>
+                    <?php
+                    if (isset($_GET['post'])) {
+                        $post_id = $_GET['post'];
+                        $get_applies = mysqli_query($connection, "SELECT * FROM applies WHERE post = '$post_id'");
+                        while ($apply = mysqli_fetch_assoc($get_applies)) {
+                            $user_id = $apply['user'];
+                            $user = mysqli_fetch_assoc(mysqli_query($connection, "SELECT * FROM users WHERE id = '$user_id'"));
+                            ?>
+                            <p><?php echo $user['name']; ?></p>
+                            <?php
+                        }
+                    }
+                    else {
+                        echo '<h5 class="null">یک آگهی را انتخاب کنید.</h5>';
+                    }
+                    ?>
                 </div>
             </div>
             <div class="col-md-4">

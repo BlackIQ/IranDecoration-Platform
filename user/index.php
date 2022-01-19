@@ -124,7 +124,7 @@ $user_id = $_USER['id'];
                         <?php
                         if (isset($_GET['apply'])) {
                             ?>
-                            <i class="fa fa-times text-main float-start" onclick="del('apply'); changeUrl('.');"></i>
+                            <i class="fa fa-times text-main float-start pointer" onclick="del('apply'); changeUrl('.');"></i>
                             <?php
                         }
                         ?>
@@ -211,7 +211,7 @@ $user_id = $_USER['id'];
                         <?php
                         if (isset($_GET['post'])) {
                             ?>
-                            <i class="fa fa-times text-main float-start" onclick="del('post'); changeUrl('.');"></i>
+                            <i class="fa fa-times text-main float-start pointer" onclick="del('post'); changeUrl('.');"></i>
                             <?php
                         }
                         ?>
@@ -241,8 +241,11 @@ $user_id = $_USER['id'];
                         اطلاعات درخواست
                         <?php
                         if (isset($_GET['uapply'])) {
+                            $uapply = $_GET['uapply'];
+                            $apply = mysqli_fetch_assoc(mysqli_query($connection, "SELECT * FROM applies WHERE apply_id = '$uapply'"));
+                            $p = $apply['post'];
                             ?>
-                            <i class="fa fa-times text-main float-start" onclick="del('uapply'); changeUrl('.');"></i>
+                            <i class="fa fa-times text-main float-start pointer" onclick="del('uapply'); changeUrl('?post=<?php echo $p; ?>');"></i>
                             <?php
                         }
                         ?>

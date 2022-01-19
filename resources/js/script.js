@@ -61,6 +61,9 @@ if (get('apply') !== null) {
 else if (get('post') !== null) {
     changePanel('.ads', '#ads-link');
 }
+else if (get('uapply') !== null) {
+    changePanel('.ads', '#ads-link');
+}
 
 if (get('theme') === 'light') {
     $('.body').addClass('light');

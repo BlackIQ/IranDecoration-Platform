@@ -225,7 +225,7 @@ $user_id = $_USER['id'];
                             $user_id = $apply['user'];
                             $user = mysqli_fetch_assoc(mysqli_query($connection, "SELECT * FROM users WHERE id = '$user_id'"));
                             ?>
-                            <p><?php echo $user['name']; ?></p>
+                            <p class="pointer" onclick="set('uapply', '<?php echo $post_id; ?>'); changeUrl('?post=<?php echo $post_id; ?>&uapply=<?php echo $apply['apply_id']; ?>');"><?php echo $user['name']; ?></p>
                             <?php
                         }
                     }
@@ -237,9 +237,64 @@ $user_id = $_USER['id'];
             </div>
             <div class="col-md-4">
                 <div class="m-1 ibox border-main">
-                    <h4 class="text-main">اطلاعات درخواست</h4>
+                    <h4 class="text-main">
+                        اطلاعات درخواست
+                        <?php
+                        if (isset($_GET['uapply'])) {
+                            ?>
+                            <i class="fa fa-times text-main float-start" onclick="del('uapply'); changeUrl('.');"></i>
+                            <?php
+                        }
+                        ?>
+                    </h4>
                     <hr class="text-main">
-                    <h5 class="null">یک درخواست را انتخاب کنید.</h5>
+                    <?php
+                    if (isset($_GET['uapply'])) {
+                        $uapply = $_GET['uapply'];
+                        $apply = mysqli_fetch_assoc(mysqli_query($connection, "SELECT * FROM applies WHERE apply_id = '$uapply'"));
+                        $uid = $apply['user'];
+                        $pid = $apply['post'];
+                        $user = mysqli_fetch_assoc(mysqli_query($connection, "SELECT * FROM users WHERE id = '$uid'"));
+                        $post = mysqli_fetch_assoc(mysqli_query($connection, "SELECT * FROM posts WHERE id = '$pid'"));
+                        ?>
+                        <p class="text-main"><small><b>اطلاعات درخواست دهنده</b></small></p>
+                        <p>
+                            <i class="fa fa-user text-main"></i>
+                            <?php echo $user['name']; ?>
+                        </p>
+                        <p>
+                            <i class="fa fa-mobile text-main"></i>
+                            <?php echo $user['phone']; ?>
+                        </p>
+                        <br>
+                        <p class="text-main"><small><b>اطلاعات درخواست</b></small></p>
+                        <p>
+                            <i class="fa fa-calendar text-main"></i>
+                            <?php echo $apply['date']; ?>
+                        </p>
+                        <p>
+                            <i class="fa fa-envelope text-main"></i>
+                            <?php echo $apply['message']; ?>
+                        </p>
+                        <br>
+                        <p class="text-main"><small><b>اطلاعات آگهی</b></small></p>
+                        <p>
+                            <i class="fa fa-id-card text-main"></i>
+                            <?php echo $post['name']; ?>
+                        </p>
+                        <p>
+                            <i class="fa fa-info-circle text-main"></i>
+                            <?php echo $post['caption']; ?>
+                        </p>
+                        <p>
+                            <i class="fa fa-calendar text-main"></i>
+                            <?php echo $post['date']; ?>
+                        </p>
+                        <?php
+                    } else {
+                        echo '<h5 class="null">یک درخواست را انتخاب کنید.</h5>';
+                    }
+                    ?>
                 </div>
             </div>
         </div>

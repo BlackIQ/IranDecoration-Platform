@@ -88,7 +88,7 @@ $session_status = $_SESSION['status'];
         </div>
         <div class="col-md-6 text-center">
             <div class="m-1">
-                <img class="index-image" src="https://inspiredbycharm.com/wp-content/uploads/2019/11/kitchen-christmas-decorating.jpg" alt="idk">
+                <img class="index-image" src="http://johnjkitchendesigns.com/wp-content/uploads/2019/03/SandsPoint_Int_4.jpg" alt="idk">
             </div>
         </div>
     </div>

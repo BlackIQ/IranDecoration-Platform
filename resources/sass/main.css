@@ -76,52 +76,52 @@
   color: white;
 }
 .dark .text-main {
-  color: #ff0030 !important;
+  color: #007bff !important;
 }
 .dark .svgbg {
-  fill: #ff0030;
+  fill: #007bff;
 }
 .dark .active {
-  color: #ff0030 !important;
+  color: #007bff !important;
 }
 .dark .text-main {
-  color: #ff0030 !important;
+  color: #007bff !important;
 }
 .dark .a-main {
   cursor: pointer;
-  color: #ff0030 !important;
+  color: #007bff !important;
 }
 .dark .a-main:hover {
-  color: #ff0030 !important;
+  color: #007bff !important;
 }
 .dark .border-main {
-  border: solid 1px #ff0030 !important;
+  border: solid 1px #007bff !important;
 }
 .dark .border-right {
-  border-right: solid 1px #ff0030;
+  border-right: solid 1px #007bff;
 }
 .dark .border-left {
-  border-left: solid 1px #ff0030;
+  border-left: solid 1px #007bff;
 }
 .dark .bg-main {
   color: white;
   padding: 0 2% 2%;
-  background: #ff0030;
+  background: #007bff;
 }
 .dark .count-requests {
-  color: #ff0030;
+  color: #007bff;
 }
 .dark .btn-main {
   color: white;
-  background: #ff0030;
-  border: solid 1px #ff0030;
+  background: #007bff;
+  border: solid 1px #007bff;
   border-radius: 5px;
 }
 .dark .deactive {
   color: gray !important;
 }
 .dark .auth-link {
-  color: #ff0030 !important;
+  color: #007bff !important;
 }
 .dark .null {
   color: gray;
